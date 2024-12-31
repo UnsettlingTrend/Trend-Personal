@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Location Type'
+vid: location_type
+description: 'Types and icons for locations.'
+weight: 0
+new_revision: false

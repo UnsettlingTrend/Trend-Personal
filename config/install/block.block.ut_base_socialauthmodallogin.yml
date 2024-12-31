@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_auth_modal
+    - system
+    - user
+  theme:
+    - ut_base
+id: ut_base_socialauthmodallogin
+theme: ut_base
+region: sidebar_second
+weight: 0
+provider: null
+plugin: social_auth_login_modal_block
+settings:
+  id: social_auth_login_modal_block
+  label: Login
+  label_display: visible
+  provider: social_auth_modal
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

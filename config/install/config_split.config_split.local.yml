@@ -1,0 +1,19 @@
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: local
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/sync/local
+module:
+  devel: 0
+  devel_debug_log: 0
+  devel_kint_extras: 0
+theme: {  }
+complete_list: {  }
+partial_list:
+  - environment_indicator.indicator

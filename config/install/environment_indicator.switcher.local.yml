@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+weight: '0'
+url: 'https://cnc.lndo.site'
+fg_color: '#d0d0d0'
+bg_color: '#4400ff'

@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - book
+    - comment
+    - contact
+    - filter
+    - media
+    - node_view_permissions
+    - paragraphs_type_permissions
+    - system
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access printer-friendly version'
+  - 'access site-wide contact form'
+  - 'use text format restricted_html'
+  - 'view any article content'
+  - 'view any page content'
+  - 'view any recipe content'
+  - 'view media'
+  - 'view paragraph content from_library'
+  - 'view paragraph content ingredient'
+  - 'view paragraph content media'
+  - 'view paragraph content record'
+  - 'view paragraph content section'
+  - 'view paragraph content text_area'
+  - 'view paragraph content view'

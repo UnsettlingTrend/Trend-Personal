@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+id: paragraphs_library_item.summary
+label: Summary
+description: ''
+targetEntityType: paragraphs_library_item
+cache: true

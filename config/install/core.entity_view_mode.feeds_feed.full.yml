@@ -1,0 +1,10 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - feeds
+id: feeds_feed.full
+label: 'Full feed'
+description: ''
+targetEntityType: feeds_feed
+cache: true

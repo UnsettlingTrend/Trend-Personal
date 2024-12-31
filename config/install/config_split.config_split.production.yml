@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/sync/prod
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }

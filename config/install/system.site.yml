@@ -1,0 +1,12 @@
+langcode: en
+name: ChrisandCammy.com
+mail: chrisferagotti@gmail.com
+slogan: ''
+page:
+  403: /node/10
+  404: /node/9
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''
