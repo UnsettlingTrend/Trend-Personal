@@ -8,14 +8,14 @@ label: Recipes
 type: 'canonical_entities:node'
 pattern: 'recipes/[node:title]'
 selection_criteria:
-  68b8351e-1275-4c64-ae8f-5e76bd625520:
+  dc4d06fd-63d2-4819-9b26-af064188f8f6:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 68b8351e-1275-4c64-ae8f-5e76bd625520
+    uuid: dc4d06fd-63d2-4819-9b26-af064188f8f6
     context_mapping:
       node: node
     bundles:
       recipe: recipe
 selection_logic: and
-weight: -5
+weight: -7
 relationships: {  }

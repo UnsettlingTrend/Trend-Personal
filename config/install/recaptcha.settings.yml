@@ -1,5 +1,5 @@
-site_key: 6LcI6uQpAAAAAPiM2wTu8MzoNt28UyCV4LknIkNI
-secret_key: 6LcI6uQpAAAAAGcD3Yi1DZ03caQ_y6_4FeAazQNL
+site_key: '<environment-variable>'
+secret_key: '<environment-variable>'
 verify_hostname: false
 use_globally: false
 widget:

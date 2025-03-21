@@ -1,5 +1,5 @@
-client_id: 1018966578154-abo0n6a6l3gb1ubrvh46ogh0mtmghu5i.apps.googleusercontent.com
-client_secret: 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
+client_id: '<environemtn-variable>'
+client_secret: '<environment-variable>'
 scopes: ''
 endpoints: ''
 restricted_domain: ''

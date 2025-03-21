@@ -6,7 +6,7 @@ dependencies:
 id: ut_base_local_actions
 theme: ut_base
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

@@ -2,22 +2,22 @@ langcode: en
 status: true
 dependencies:
   module:
-    - social_auth_modal
+    - social_auth
     - system
     - user
   theme:
     - ut_base
-id: ut_base_socialauthmodallogin
+id: ut_base_socialauthlogin
 theme: ut_base
-region: sidebar_second
-weight: 0
+region: content
+weight: -3
 provider: null
-plugin: social_auth_login_modal_block
+plugin: social_auth_login
 settings:
-  id: social_auth_login_modal_block
-  label: Login
-  label_display: visible
-  provider: social_auth_modal
+  id: social_auth_login
+  label: 'Social Auth Login'
+  label_display: '0'
+  provider: social_auth
 visibility:
   request_path:
     id: request_path

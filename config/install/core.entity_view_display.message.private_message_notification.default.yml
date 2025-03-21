@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.message.private_message_notification.field_message_pm_thread
+    - field.field.message.private_message_notification.field_message_private_message
+    - message.template.private_message_notification
+id: message.private_message_notification.default
+targetEntityType: message
+bundle: private_message_notification
+mode: default
+content:
+  partial_0:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  partial_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_message_pm_thread: true
+  field_message_private_message: true
+  search_api_excerpt: true

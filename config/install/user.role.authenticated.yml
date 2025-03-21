@@ -28,9 +28,11 @@ dependencies:
     - node_view_permissions
     - paragraphs_type_permissions
     - path
+    - private_message
     - system
     - taxonomy
     - toolbar
+    - workbench
 id: authenticated
 label: 'Authenticated user'
 weight: 1
@@ -46,6 +48,7 @@ permissions:
   - 'access toolbar'
   - 'access user contact forms'
   - 'access user profiles'
+  - 'access workbench'
   - 'change own username'
   - 'create article content'
   - 'create audio media'
@@ -98,6 +101,7 @@ permissions:
   - 'use editorial transition archived_published'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
+  - 'use private messaging system'
   - 'use text format basic_html'
   - 'use text format webform_default'
   - 'view all media revisions'

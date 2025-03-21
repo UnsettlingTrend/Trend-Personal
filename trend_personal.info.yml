@@ -140,6 +140,8 @@ install:
   - leaflet_more_markers
   - login_emailusername
   - maillog
+  - message
+  - message_notify
   - module_filter
   - name
   - node_view_permissions
@@ -149,6 +151,8 @@ install:
   - pathauto
   - physical
   - pirate
+  - private_message_notify
+  - private_message
   - recaptcha
   - redirect_404
   - redirect
@@ -173,7 +177,6 @@ install:
   - social_api
   - social_auth
   - social_auth_google
-  - social_auth_modal
   - svg_image_responsive
   - svg_image
   - token
@@ -194,6 +197,7 @@ install:
   - webform_templates
   - webform_ui
   - webform
+  - workbench
   - cnc_extras
   - recipes
 themes:
