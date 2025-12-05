@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.in_content
+label: 'In Content'
+description: 'Media placed using a paragraph in a content node.'
+targetEntityType: media
+cache: true

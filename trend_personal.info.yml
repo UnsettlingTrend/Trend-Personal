@@ -1,7 +1,7 @@
 name: UnsettlingTrend Personal
 type: profile
 description: 'Profile for UnsettlingTrend personal site.'
-core_version_requirement: '^10'
+core_version_requirement: ^10 || ^11
 
 distribution:
   name: UnsettlingTrend Personal
@@ -67,6 +67,11 @@ install:
   - address
   - admin_toolbar
   - admin_toolbar_tools
+  - ai
+  - ai_automators
+  - ai_ckeditor
+  - ai_content_suggestions
+  - ai_logging
   - ajax_comments
   - better_exposed_filters
   - block_content_template
@@ -84,7 +89,6 @@ install:
   - ctools_views
   - devel
   - devel_debug_log
-  - devel_kint_extras
   - diff
   - disable_html5_validation
   - dynamic_entity_reference
@@ -130,6 +134,7 @@ install:
   - jquery_ui_menu
   - jquery_ui_slider
   - jquery_ui_touch_punch
+  - key
   - layout_paragraphs
   - layout_paragraphs_library
   - layout_paragraphs_permissions
@@ -139,7 +144,6 @@ install:
   - leaflet_more_maps
   - leaflet_more_markers
   - login_emailusername
-  - maillog
   - message
   - message_notify
   - module_filter
@@ -149,8 +153,9 @@ install:
   - paragraphs_type_permissions
   - paragraphs
   - pathauto
+  - photoswipe_dynamic_caption
+  - photoswipe
   - physical
-  - pirate
   - private_message_notify
   - private_message
   - recaptcha
@@ -179,12 +184,14 @@ install:
   - social_auth_google
   - svg_image_responsive
   - svg_image
+  - mailer_transport
+  - symfony_mailer
+  - symfony_mailer_log
   - token
   - twig_field_value
   - twig_tweak
   - upgrade_status
   - uswds_templates
-  - variationcache
   - views_bulk_operations
   - views_dependent_filters
   - viewsreference

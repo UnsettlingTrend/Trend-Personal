@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quote.field_paragraph
+    - field.field.node.quote.field_source
+    - field.field.node.quote.field_tags
+    - node.type.quote
+  module:
+    - user
+id: node.quote.teaser
+targetEntityType: node
+bundle: quote
+mode: teaser
+content:
+  field_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_paragraph: true
+  field_source: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

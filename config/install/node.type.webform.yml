@@ -1,12 +1,19 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - menu_ui
   enforced:
     module:
       - webform_node
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 name: Webform
 type: webform
-description: 'A basic page with a webform attached.'
+description: 'A basic page with a <em>webform</em> attached.'
 help: null
 new_revision: false
 preview_mode: 1

@@ -3,24 +3,33 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_media_image
+    - image.style.full_width
     - image.style.large
+    - image.style.thumbnail
     - media.type.image
   module:
-    - svg_image
+    - photoswipe
+    - photoswipe_dynamic_caption
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
   field_media_image:
-    type: image
+    type: photoswipe_field_formatter
     label: visually_hidden
     settings:
-      image_link: ''
-      image_style: large
+      photoswipe_thumbnail_style_first: large
+      photoswipe_thumbnail_style: thumbnail
+      photoswipe_image_style: full_width
+      photoswipe_reference_image_field: ''
+      photoswipe_view_mode: default
       image_loading:
         attribute: lazy
-    third_party_settings: {  }
+    third_party_settings:
+      photoswipe_dynamic_caption:
+        photoswipe_caption: title
+        photoswipe_caption_custom: ''
     weight: 1
     region: content
 hidden:

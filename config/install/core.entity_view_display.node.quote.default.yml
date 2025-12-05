@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quote.field_paragraph
+    - field.field.node.quote.field_source
+    - field.field.node.quote.field_tags
+    - node.type.quote
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.quote.default
+targetEntityType: node
+bundle: quote
+mode: default
+content:
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_source:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

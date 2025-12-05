@@ -9,7 +9,7 @@ third_party_settings:
     parent: ''
 name: Event
 type: event
-description: 'Content which describes something happening at a specific time.'
+description: 'An <em>event</em> happening at a particular place and time.'
 help: null
 new_revision: true
 preview_mode: 1

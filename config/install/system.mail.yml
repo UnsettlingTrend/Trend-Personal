@@ -1,5 +1,6 @@
 interface:
-  default: maillog
+  default: php_mail
+  webform: webform_php_mail
 mailer_dsn:
   scheme: sendmail
   host: default

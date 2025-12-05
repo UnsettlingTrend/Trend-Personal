@@ -3,7 +3,7 @@ status: true
 dependencies: {  }
 name: 'Limited HTML'
 format: limited_html
-weight: -10
+weight: -8
 filters:
   filter_html:
     id: filter_html

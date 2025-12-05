@@ -1,11 +1,11 @@
 langcode: en
-name: TheFeragottis.com
+name: ChrisFeragotti.com
 mail: chrisferagotti@gmail.com
 slogan: ''
 page:
   403: /node/10
   404: /node/9
-  front: /node
+  front: /node/22
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.limited_html
     - filter.format.webform_default
     - media.type.audio
     - media.type.document
@@ -15,6 +16,8 @@ dependencies:
     - taxonomy.vocabulary.tags
     - workflows.workflow.editorial
   module:
+    - ai_ckeditor
+    - ai_content_suggestions
     - book
     - captcha
     - comment
@@ -38,6 +41,7 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access ai content suggestion tools'
   - 'access comments'
   - 'access content'
   - 'access content overview'
@@ -97,12 +101,14 @@ permissions:
   - 'update media'
   - 'update paragraph content media'
   - 'update paragraph content text_area'
+  - 'use ai ckeditor'
   - 'use editorial transition archived_draft'
   - 'use editorial transition archived_published'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use private messaging system'
   - 'use text format basic_html'
+  - 'use text format limited_html'
   - 'use text format webform_default'
   - 'view all media revisions'
   - 'view all revisions'
