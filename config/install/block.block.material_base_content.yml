@@ -1,3 +1,4 @@
+uuid: fb5699d7-f46d-4e0e-82bb-607721a71638
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - material_base
+_core:
+  default_config_hash: PYQGCEwP5-CVhifivekkNJRcaMbSW6GXMj7CB_4DgNU
 id: material_base_content
 theme: material_base
 region: content

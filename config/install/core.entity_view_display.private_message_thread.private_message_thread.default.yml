@@ -1,8 +1,11 @@
+uuid: 7f534e95-e1fd-4fd4-804f-53173415d5e7
 langcode: en
 status: true
 dependencies:
   module:
     - private_message
+_core:
+  default_config_hash: NWB-h6yNCmLn2WjxiQTUU91rzD-pi1_H7xWJhyHq2mw
 id: private_message_thread.private_message_thread.default
 targetEntityType: private_message_thread
 bundle: private_message_thread

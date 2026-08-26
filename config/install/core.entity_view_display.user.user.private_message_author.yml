@@ -1,3 +1,4 @@
+uuid: 16990dc9-c816-4fd1-8f72-211176edcc69
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - field.field.user.user.user_picture
   module:
     - user
+_core:
+  default_config_hash: 5VkjdDDe_kM-giLC61z36ACn6Z2eMjaH63Rh6adWWpw
 id: user.user.private_message_author
 targetEntityType: user
 bundle: user
@@ -21,6 +24,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
     region: content
 hidden:
   field_name: true

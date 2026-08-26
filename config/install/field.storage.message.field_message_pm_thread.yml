@@ -1,3 +1,4 @@
+uuid: f29d7b55-4d68-43f3-9e44-b3c1da6f89b4
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   enforced:
     module:
       - private_message
+_core:
+  default_config_hash: mqgzJErWUxwH_N2Xr0VUTVA9c_Z0Z4eBeBr2-lxfnik
 id: message.field_message_pm_thread
 field_name: field_message_pm_thread
 entity_type: message

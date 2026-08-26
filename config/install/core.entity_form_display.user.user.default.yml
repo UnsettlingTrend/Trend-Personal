@@ -1,3 +1,4 @@
+uuid: 3f45e119-01fe-4fec-bf36-e1ae92ee3cf9
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,8 @@ dependencies:
     - path
     - svg_image
     - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -39,6 +42,7 @@ content:
         generational: Generational
         credentials: Credentials
       widget_layout: stacked
+      wrapper_type: container
       show_component_required_marker: false
       credentials_inline: false
       size:
@@ -64,6 +68,16 @@ content:
   path:
     type: path
     weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  private_messages:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  social_auth:
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }

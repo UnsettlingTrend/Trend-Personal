@@ -1,3 +1,4 @@
+uuid: d144d1b7-55c5-4fa1-a9a9-0b2010554ff8
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: Ls5l3Xs7-YstJnurxFLKj38Exqr2JMZs1j9YeX1Kh2o
 id: node.webform.teaser
 targetEntityType: node
 bundle: webform

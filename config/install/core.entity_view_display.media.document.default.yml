@@ -1,11 +1,15 @@
+uuid: 5f33f2c7-3553-48f5-8ba5-6076f2427dcc
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.document.field_media_document
+    - field.field.media.document.field_title
     - media.type.document
   module:
     - file
+_core:
+  default_config_hash: DXitcriWmE5QHvGvk2OzWouaSnXD5uipkRdAG6_pnkg
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -14,7 +18,16 @@ content:
   field_media_document:
     type: file_default
     label: visually_hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 1
     region: content

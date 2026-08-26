@@ -1,3 +1,4 @@
+uuid: e6673eea-48ff-4397-84e8-39543af09415
 langcode: en
 status: true
 dependencies:
@@ -13,7 +14,7 @@ mode: default
 content:
   field_view:
     type: viewsreference_formatter
-    label: above
+    label: hidden
     settings:
       plugin_types:
         - block

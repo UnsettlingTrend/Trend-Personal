@@ -1,3 +1,4 @@
+uuid: d3cacfa7-742b-4f3c-a34e-1c1997613cb9
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - material_base
+_core:
+  default_config_hash: 1QhDiEbLWUSCgYU_RJeV1lVpjpQXvrHRFkYYGmGesCA
 id: material_base_breadcrumbs
 theme: material_base
 region: breadcrumb

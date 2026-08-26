@@ -1,9 +1,12 @@
+uuid: 1920d0a5-8a70-4f8b-acb7-48a7eeabd202
 langcode: en
 status: open
 dependencies:
   enforced:
     module:
       - webform_options_custom
+_core:
+  default_config_hash: Yq5gPKCUuIY3Re5SNmD_cWUwdJBVMYpWkUO-jdPximg
 weight: 0
 open: null
 close: null

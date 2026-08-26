@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: 9qAvxkBYFcXXYVGI3KlH9Ks1AxdH0u6GpCrxzqDXO8M
 langcode: en
 settings:
   default_status: open

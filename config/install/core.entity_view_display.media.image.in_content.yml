@@ -1,12 +1,13 @@
+uuid: 0d2fbf35-903b-4caf-bf36-bb061712fd23
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.in_content
     - field.field.media.image.field_media_image
-    - image.style.full_width
+    - field.field.media.image.field_title
+    - image.style.in_content
     - media.type.image
-    - responsive_image.styles.narrow
   module:
     - layout_builder
     - photoswipe
@@ -15,6 +16,8 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
+_core:
+  default_config_hash: B1a2aBHmUulUZN6HrxITEH1tSResuVjXMBEv1lUBtOo
 id: media.image.in_content
 targetEntityType: media
 bundle: image
@@ -25,8 +28,8 @@ content:
     label: visually_hidden
     settings:
       photoswipe_thumbnail_style_first: ''
-      photoswipe_thumbnail_style: narrow
-      photoswipe_image_style: full_width
+      photoswipe_thumbnail_style: ''
+      photoswipe_image_style: in_content
       photoswipe_reference_image_field: ''
       photoswipe_view_mode: in_content
       image_loading:
@@ -39,6 +42,7 @@ content:
     region: content
 hidden:
   created: true
+  field_title: true
   langcode: true
   name: true
   search_api_excerpt: true

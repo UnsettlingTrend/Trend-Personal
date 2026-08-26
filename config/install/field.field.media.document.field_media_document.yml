@@ -1,3 +1,4 @@
+uuid: fdba2c89-19fa-4067-a593-17e4ff62c497
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
   enforced:
     module:
       - media
+_core:
+  default_config_hash: 52m0CtJVAoE3Qvh2AiciSkV8odAgQeRo4yNDGgUA7dc
 id: media.document.field_media_document
 field_name: field_media_document
 entity_type: media

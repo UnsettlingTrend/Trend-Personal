@@ -1,3 +1,4 @@
+uuid: 31087312-9812-4e28-8f40-1bad8eb885bc
 langcode: en
 status: false
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - system
   theme:
     - material_base
+_core:
+  default_config_hash: '-q_INeI9Xc3zWsMMmVsaTh-g2B6PMGh_FWIyhITdbs0'
 id: material_base_account_menu
 theme: material_base
 region: navbar

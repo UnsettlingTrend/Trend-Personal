@@ -1,5 +1,6 @@
+uuid: 086b9a61-d47e-4606-90fb-5bea1ae27743
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_auth
@@ -10,7 +11,7 @@ dependencies:
 id: ut_material_socialauthlogin
 theme: ut_material
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: social_auth_login
 settings:

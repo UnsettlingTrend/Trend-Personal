@@ -1,3 +1,4 @@
+uuid: 80b04f30-87c3-4405-ba55-b562220a4908
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,8 @@ dependencies:
     - node
     - smart_date
     - user
+_core:
+  default_config_hash: jQp_UiShPgNeRASYj0aK6JOvBJciIU75z1F_rSX18sg
 id: events_calendar
 label: 'Events Calendar'
 module: views

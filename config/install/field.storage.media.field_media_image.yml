@@ -1,3 +1,4 @@
+uuid: f3cd159f-d3de-4c9a-97b0-ee5bd4c7560d
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
   enforced:
     module:
       - media
+_core:
+  default_config_hash: 7ZBrcl87ZXaw42v952wwcw_9cQgTBq5_5tgyUkE-VV0
 id: media.field_media_image
 field_name: field_media_image
 entity_type: media

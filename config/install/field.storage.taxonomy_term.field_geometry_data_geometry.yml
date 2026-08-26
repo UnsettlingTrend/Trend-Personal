@@ -1,3 +1,4 @@
+uuid: ef321f55-ac63-4f94-8c0b-6b97392d3d38
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   enforced:
     module:
       - geolocation_geometry_data
+_core:
+  default_config_hash: pqdfzVSU7bFY0WSB4DwpTVBaHpimqasHbmD0Lon1Cv0
 id: taxonomy_term.field_geometry_data_geometry
 field_name: field_geometry_data_geometry
 entity_type: taxonomy_term

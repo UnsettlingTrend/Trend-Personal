@@ -1,9 +1,11 @@
+uuid: a355e2cc-9bd6-45da-8682-1b5516f2f0a6
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.in_content
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_title
     - media.type.audio
   module:
     - file
@@ -12,6 +14,8 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
+_core:
+  default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
 id: media.audio.in_content
 targetEntityType: media
 bundle: audio
@@ -30,6 +34,7 @@ content:
     region: content
 hidden:
   created: true
+  field_title: true
   langcode: true
   name: true
   search_api_excerpt: true

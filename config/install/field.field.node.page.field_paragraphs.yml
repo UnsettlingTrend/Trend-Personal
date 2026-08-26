@@ -1,3 +1,4 @@
+uuid: dfb1c455-6cca-4b68-a91e-9bfa4f8d2b3e
 langcode: en
 status: true
 dependencies:
@@ -28,17 +29,20 @@ settings:
       view: view
     negate: 0
     target_bundles_drag_drop:
+      block:
+        weight: 13
+        enabled: false
+      data_visualization:
+        weight: 12
+        enabled: true
       from_library:
         weight: -7
         enabled: false
       ingredient:
         weight: 10
         enabled: false
-      location:
-        weight: 11
-        enabled: false
-      map_marker:
-        weight: 12
+      layout:
+        weight: 16
         enabled: false
       media:
         weight: -5
@@ -52,6 +56,9 @@ settings:
       text_area:
         weight: -6
         enabled: true
+      text_list:
+        weight: 21
+        enabled: false
       view:
         weight: 18
         enabled: true

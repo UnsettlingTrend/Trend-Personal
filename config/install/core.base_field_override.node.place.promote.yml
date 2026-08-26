@@ -1,3 +1,4 @@
+uuid: c34988f2-49b8-44b7-834e-2c8763d8ae87
 langcode: en
 status: true
 dependencies:
@@ -13,7 +14,7 @@ required: false
 translatable: true
 default_value:
   -
-    value: 0
+    value: 1
 default_value_callback: ''
 settings:
   on_label: 'On'

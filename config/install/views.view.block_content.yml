@@ -1,9 +1,12 @@
+uuid: 16549b06-da02-4123-a2f9-d94a17892c62
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - user
+_core:
+  default_config_hash: P7mydegwqGbeXpLHAlS1BTJBFfvX8tQ62dIECLLklb8
 id: block_content
 label: 'Content blocks'
 module: views
@@ -314,17 +317,6 @@ display:
           empty: true
           content: 'There are no custom blocks available.'
           tokenize: false
-        block_content_listing_empty:
-          id: block_content_listing_empty
-          table: block_content
-          field: block_content_listing_empty
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: block_content
-          plugin_id: block_content_listing_empty
-          label: ''
-          empty: true
       sorts: {  }
       arguments: {  }
       filters:
@@ -356,8 +348,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -398,8 +388,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -500,6 +488,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

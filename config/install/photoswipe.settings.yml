@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: AuQRq7_2iJQR0uk3wdl290UEDlcPVf8tQBRamInGQyE
 photoswipe_always_load_non_admin: false
 enable_cdn: false
 options:
@@ -30,6 +32,7 @@ options:
   zoomTitle: Zoom
   arrowPrevTitle: Previous
   arrowNextTitle: Next
+  downloadTitle: Download
   indexIndicatorSep: ' / '
   errorMsg: 'The image could not be loaded.'
   preload:

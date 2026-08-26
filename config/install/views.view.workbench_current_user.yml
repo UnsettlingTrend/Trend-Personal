@@ -1,8 +1,11 @@
+uuid: 7cc6206c-647b-47e9-a23a-4b3d41a6beb3
 langcode: en
 status: true
 dependencies:
   module:
     - user
+_core:
+  default_config_hash: ii6Ab07A59NstuhmfXyQ9RgQXjhWoE3V4xdP4EcACQ8
 id: workbench_current_user
 label: 'Workbench: Current user'
 module: views

@@ -1,3 +1,4 @@
+uuid: 3e25679b-b85b-4987-a6b4-45fb7a08c6d5
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
   enforced:
     module:
       - responsive_image
+_core:
+  default_config_hash: MIWUEhKenWK-3vEZNN_FJwpmqggIZtfJ9LOLYryTqHI
 name: max_650x650
 label: 'Max 650x650'
 effects:

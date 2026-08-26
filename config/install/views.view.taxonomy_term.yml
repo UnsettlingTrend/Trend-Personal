@@ -1,12 +1,16 @@
+uuid: 131a6c38-41c2-49ab-97e9-625894defbc8
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.rss
     - core.entity_view_mode.node.teaser
   module:
     - node
     - taxonomy
     - user
+_core:
+  default_config_hash: ZptEEU9Oid5HG0xwMVHE5HdrocHzj7PybwJZ_0LNimY
 id: taxonomy_term
 label: 'Taxonomy term'
 module: taxonomy
@@ -277,7 +281,7 @@ display:
         type: node_rss
         options:
           relationship: none
-          view_mode: default
+          view_mode: rss
       query:
         type: views_query
         options: {  }

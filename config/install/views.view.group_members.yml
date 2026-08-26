@@ -1,3 +1,4 @@
+uuid: 4358fbf2-3854-41bd-be96-8da4190c76b1
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   module:
     - group
     - user
+_core:
+  default_config_hash: pWSLPQ5sPNQFFP3BTa41ET0FLbfFZ9AgkayB8W10qcc
 id: group_members
 label: 'Group members'
 module: group
@@ -650,6 +653,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
         options:

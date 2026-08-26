@@ -1,9 +1,11 @@
+uuid: 99893810-64ca-4f79-8ecf-1ab5d45bc28e
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.in_content
     - field.field.media.document.field_media_document
+    - field.field.media.document.field_title
     - media.type.document
   module:
     - file
@@ -12,6 +14,8 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
+_core:
+  default_config_hash: DXitcriWmE5QHvGvk2OzWouaSnXD5uipkRdAG6_pnkg
 id: media.document.in_content
 targetEntityType: media
 bundle: document
@@ -26,6 +30,7 @@ content:
     region: content
 hidden:
   created: true
+  field_title: true
   langcode: true
   name: true
   search_api_excerpt: true

@@ -1,8 +1,11 @@
+uuid: aba11b07-778b-437e-beb6-437ec8e0af93
 langcode: en
 status: true
 dependencies:
   module:
     - media
+_core:
+  default_config_hash: SJgxR5XWOesQbEKqp8VgInPyJjCFU_t2pi7UzYB78xg
 id: media.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media

@@ -1,6 +1,9 @@
+uuid: 1d04dab7-0688-4e60-be06-f54f6d43e5fc
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: TABA4k7qc_23n1AToUmJbQSNlXry5Me_aUE855mV2pw
 id: buttons
 label: Buttons
 category: Buttons

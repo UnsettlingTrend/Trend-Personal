@@ -1,3 +1,4 @@
+uuid: eef08c22-1811-46b9-bbb9-ef8e36d90663
 langcode: en
 status: true
 dependencies:
@@ -12,6 +13,8 @@ dependencies:
     - node.type.article
   module:
     - user
+_core:
+  default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
 id: node.article.rss
 targetEntityType: node
 bundle: article
@@ -35,4 +38,5 @@ hidden:
   field_take_aways: true
   langcode: true
   private_message_link: true
+  published_at: true
   search_api_excerpt: true

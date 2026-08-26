@@ -1,3 +1,4 @@
+uuid: babb9ccd-7027-4ee8-a3da-01ae3163536e
 langcode: en
 status: true
 dependencies:
@@ -92,6 +93,8 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+_core:
+  default_config_hash: _wJpjAm9mL9fSrTxY990d6dqKbX1oKvHzs_AEvwrhU0
 id: node.event.default
 targetEntityType: node
 bundle: event

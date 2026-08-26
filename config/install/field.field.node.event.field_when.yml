@@ -1,3 +1,4 @@
+uuid: 9840601d-21a8-4c38-b6e9-5b823d57bf27
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.event
   module:
     - smart_date
+_core:
+  default_config_hash: nKZZDdhnojhVj7pdps8CNK31BrY1UUMw3ESSPCi0pRk
 id: node.event.field_when
 field_name: field_when
 entity_type: node

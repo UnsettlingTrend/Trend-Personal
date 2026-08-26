@@ -1,3 +1,4 @@
+uuid: 514b574f-35c3-46e9-ac36-d19f4d9f734a
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - core.entity_view_mode.private_message_thread.inbox
   module:
     - private_message
+_core:
+  default_config_hash: LjDdWYVuAO2Ol4kBXw959K6UO6mNKN1rdd5kIGVkcVo
 id: private_message_thread.private_message_thread.inbox
 targetEntityType: private_message_thread
 bundle: private_message_thread

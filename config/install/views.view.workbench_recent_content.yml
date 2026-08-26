@@ -1,9 +1,12 @@
+uuid: 3dfe429f-30c1-4919-9ed4-28449e054cb7
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: LafRQT_cjzkKaN1auQCmIUQR5eTYCYKCUV1tpNgTi9o
 id: workbench_recent_content
 label: 'Workbench: Recent content'
 module: views
@@ -493,9 +496,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -534,9 +534,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -576,9 +573,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -695,6 +689,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:
@@ -1108,9 +1103,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
           is_grouped: false
           group_info:
             label: ''

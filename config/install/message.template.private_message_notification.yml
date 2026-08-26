@@ -1,8 +1,11 @@
+uuid: 21ddd490-91b4-47e0-8313-f46b4b72c2f8
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.plain_text
+_core:
+  default_config_hash: QTuGgy7-2bLlPeOYWjU-tQMXFyOSYVjHo03CgAdnuQ8
 template: private_message_notification
 label: 'Private Message Notification'
 description: 'The notification from a private message'

@@ -1,9 +1,12 @@
+uuid: 3673564a-5cfe-4e59-8861-0da4c11dd8fc
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: KA4Hf34mvpvk8DI9wM85h6svN-nwdjw-ffaUNRhmpps
 id: workbench_edited
 label: 'Workbench: Edits by user'
 module: views
@@ -611,9 +614,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -654,9 +654,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -698,9 +695,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              editor: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -813,6 +807,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

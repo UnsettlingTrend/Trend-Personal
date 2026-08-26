@@ -1,3 +1,4 @@
+uuid: c94cf8bb-de7e-403e-96e8-864d2a96b781
 langcode: en
 status: true
 dependencies:
@@ -28,11 +29,20 @@ settings:
       media: media
     negate: 0
     target_bundles_drag_drop:
+      block:
+        weight: 13
+        enabled: false
+      data_visualization:
+        weight: 12
+        enabled: true
       from_library:
         weight: -15
         enabled: false
       ingredient:
         weight: -11
+        enabled: false
+      layout:
+        weight: 16
         enabled: false
       media:
         weight: -12
@@ -46,6 +56,9 @@ settings:
       text_area:
         weight: -13
         enabled: true
+      text_list:
+        weight: 21
+        enabled: false
       view:
         weight: -9
         enabled: false

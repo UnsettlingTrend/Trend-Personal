@@ -1,3 +1,4 @@
+uuid: 42c21fbc-9c57-4e3c-bd6b-a0c499719f74
 langcode: en
 status: true
 dependencies:
@@ -409,6 +410,7 @@ display:
           empty_table: false
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

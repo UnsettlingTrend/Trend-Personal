@@ -1,9 +1,12 @@
+uuid: 00693f6c-39ab-42a9-9937-0ee8b7e93dde
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - webform_image_select
+_core:
+  default_config_hash: fxTwfuzcXHy13ns1ZV5g5sSFuwYIH9WwGqb96JpqNvk
 id: kittens
 label: 'Cute Kittens'
 category: Animals

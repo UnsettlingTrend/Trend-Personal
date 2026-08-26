@@ -1,3 +1,4 @@
+uuid: e8bc5344-976f-4441-b1d2-62a97b2e2e93
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - group
     - node
     - user
+_core:
+  default_config_hash: 12Bd0mJQFIaXAkRfMVCAAcZ0oaxm94PoK8oHR9hkLmY
 id: content
 label: Content
 module: node
@@ -445,8 +448,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -487,8 +488,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -530,8 +529,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -621,8 +618,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -745,6 +740,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

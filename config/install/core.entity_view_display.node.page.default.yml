@@ -1,3 +1,4 @@
+uuid: a35bd209-834b-4fbe-8d95-46269bccf3c1
 langcode: en
 status: true
 dependencies:
@@ -11,12 +12,13 @@ dependencies:
   module:
     - entity_reference_revisions
     - layout_builder
-    - text
     - user
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -25,7 +27,7 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_image:
     type: entity_reference_label
@@ -33,7 +35,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 4
+    weight: 1
     region: content
   field_paragraphs:
     type: entity_reference_revisions_entity_view
@@ -42,14 +44,7 @@ content:
       view_mode: in_content
       link: ''
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_subtitle:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_tags:
     type: entity_reference_label
@@ -57,16 +52,18 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
 hidden:
   book_navigation: true
+  field_subtitle: true
   langcode: true
   layout_builder__layout: true
   private_message_link: true
+  published_at: true
   search_api_excerpt: true

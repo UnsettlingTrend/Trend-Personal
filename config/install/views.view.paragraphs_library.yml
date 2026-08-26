@@ -1,3 +1,4 @@
+uuid: 928674f9-1a6a-468a-b88e-26d7857acc12
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - paragraphs
     - paragraphs_library
     - user
+_core:
+  default_config_hash: 67G2lyvlXJE8P8b1oAheELEdM5i74aipXfDIZCpAsdQ
 id: paragraphs_library
 label: 'Paragraphs library'
 module: views
@@ -613,8 +616,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: Label
@@ -658,8 +659,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -810,6 +809,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

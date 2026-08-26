@@ -1,3 +1,4 @@
+uuid: 810ca84f-fcbc-41e0-bff5-26999b1b81ab
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - node
+_core:
+  default_config_hash: YtTY_0RRrqa4tG8YA_WNMBauWNuKFPaFrrn4zgGzMiQ
 id: node.field_image_browser
 field_name: field_image_browser
 entity_type: node

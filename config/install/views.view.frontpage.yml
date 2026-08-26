@@ -1,3 +1,4 @@
+uuid: 27d8d059-e019-473e-894f-48ffe3513daf
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: HAnuLuk87TQ6QDwuJNjLTJYoBftdp6XtJh8RdBx3-TY
 id: frontpage
 label: Frontpage
 module: node

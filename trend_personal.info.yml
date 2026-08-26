@@ -6,20 +6,22 @@ core_version_requirement: ^10 || ^11
 distribution:
   name: UnsettlingTrend Personal
   install:
-    theme: ut_base
+    theme: ut_material
 
 install:
+  - auto_entitylabel
   - automated_cron
+  - basic_auth
   - big_pipe
   - block
   - block_content
+  - block_field
   - book
   - breakpoint
   - ckeditor5
   - comment
   - config
   - config_translation
-  - contact
   - content_moderation
   - contextual
   - datetime
@@ -87,8 +89,6 @@ install:
   - ctools
   - ctools_block
   - ctools_views
-  - devel
-  - devel_debug_log
   - diff
   - disable_html5_validation
   - dynamic_entity_reference
@@ -101,6 +101,7 @@ install:
   - environment_indicator
   - environment_indicator_ui
   - facets
+  - facets_exposed_filters
   - facets_searchbox_widget
   - facets_summary
   - feeds
@@ -121,7 +122,6 @@ install:
   - geolocation_google_maps
   - geolocation_google_static_maps
   - geolocation_leaflet
-  - geolocation_search_api
   - gin_toolbar
   - group
   - gnode
@@ -134,6 +134,7 @@ install:
   - jquery_ui_menu
   - jquery_ui_slider
   - jquery_ui_touch_punch
+  - json_field
   - key
   - layout_paragraphs
   - layout_paragraphs_library
@@ -144,8 +145,11 @@ install:
   - leaflet_more_maps
   - leaflet_more_markers
   - login_emailusername
+  - mailer_policy
+  - masquerade
   - message
   - message_notify
+  - metatag
   - module_filter
   - name
   - node_view_permissions
@@ -153,6 +157,7 @@ install:
   - paragraphs_type_permissions
   - paragraphs
   - pathauto
+  - publication_date
   - photoswipe_dynamic_caption
   - photoswipe
   - physical
@@ -187,11 +192,12 @@ install:
   - mailer_transport
   - symfony_mailer
   - symfony_mailer_log
+  - time_formatter
   - token
   - twig_field_value
   - twig_tweak
-  - upgrade_status
   - uswds_templates
+  - ut_utilities
   - views_bulk_operations
   - views_dependent_filters
   - viewsreference
@@ -203,9 +209,9 @@ install:
   - webform_options_limit
   - webform_templates
   - webform_ui
+  - webform_views
   - webform
   - workbench
-  - cnc_extras
   - recipes
 themes:
   - claro

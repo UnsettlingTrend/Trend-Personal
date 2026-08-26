@@ -1,3 +1,4 @@
+uuid: 2729e4b6-ec84-482a-b7fc-8f5fc646123d
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - entity_browser
     - paragraphs
     - paragraphs_library
+_core:
+  default_config_hash: 1JRFcz5C2u0_XbanN1ZK55S1KDMAwDhJuIVhtw6m7XY
 id: paragraphs_library_browser
 label: 'Paragraphs library browser'
 module: views
@@ -422,8 +425,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
           is_grouped: false
           group_info:
             label: Label
@@ -467,8 +468,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -619,6 +618,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
       query:

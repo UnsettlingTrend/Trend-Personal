@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: PtpX6t_RohQmgxQDoqN2cOQa3aulrjodsmMLJTLZGkc
 prompt_logging: false
 prompt_logging_tags: ''
 prompt_logging_max_messages: 1000

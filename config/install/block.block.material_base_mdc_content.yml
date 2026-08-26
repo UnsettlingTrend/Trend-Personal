@@ -1,3 +1,4 @@
+uuid: 0054fe26-36e7-4f7d-bdee-0c8d85ec95e5
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - material_base_mdc
+_core:
+  default_config_hash: nXYtSHM_l8fCSKN7bEgxQZNKMVQnIh1NQ0gHMZQOh1o
 id: material_base_mdc_content
 theme: material_base_mdc
 region: content

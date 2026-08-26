@@ -1,9 +1,12 @@
+uuid: 0000db75-0dc3-457f-8788-46ead5eb23f0
 langcode: en
 status: true
 dependencies:
   module:
     - private_message
     - text
+_core:
+  default_config_hash: cSla1miGIdpvla86ElTu6Q25Z9cwtElFBWl_yNLqZRM
 id: private_message.private_message.default
 targetEntityType: private_message
 bundle: private_message
