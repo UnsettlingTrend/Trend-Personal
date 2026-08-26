@@ -1,3 +1,4 @@
+uuid: 93ff9fb6-2049-4405-8d67-7b329abc583e
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,8 @@ dependencies:
     - node
     - smart_date
     - user
+_core:
+  default_config_hash: ELeCdrj88G60p6OidJzcv993J_Q8V1AfLIaZNxwy-lE
 id: events
 label: Events
 module: views

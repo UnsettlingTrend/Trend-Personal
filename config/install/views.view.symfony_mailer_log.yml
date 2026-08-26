@@ -1,9 +1,12 @@
+uuid: 8367045b-0ac6-44d8-b543-3caf9b83f171
 langcode: en
 status: true
 dependencies:
   module:
     - symfony_mailer_log
     - user
+_core:
+  default_config_hash: f2jpQYD6UMsL10JqgW-aWzqeQB5oL1SbPD5SwnIQ5As
 id: symfony_mailer_log
 label: 'Drupal Symfony Mailer log'
 module: views
@@ -349,6 +352,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -366,7 +370,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

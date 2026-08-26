@@ -1,3 +1,4 @@
+uuid: 30b413ed-f698-4f13-91fb-36f3880ef284
 langcode: en
 status: true
 dependencies:
@@ -16,7 +17,10 @@ dependencies:
     - media_library
     - paragraphs
     - path
+    - publication_date
     - text
+_core:
+  default_config_hash: 6VUXB1jTUjK5zjkfMa2Kd2WW4sFUlgfBlfJSx01qLpU
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -123,6 +127,12 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  published_at:
+    type: publication_date_timestamp
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

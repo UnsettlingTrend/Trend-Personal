@@ -1,8 +1,11 @@
+uuid: 80e338c2-6836-479c-87b7-8ed4181a512f
 langcode: en
 status: true
 dependencies:
   theme:
     - material_base_mdc
+_core:
+  default_config_hash: 3rhQ3pxWOH-_7QPozpDQa2wBjv80zwKYSRqUjRIZLPY
 id: material_base_mdc_local_actions
 theme: material_base_mdc
 region: content

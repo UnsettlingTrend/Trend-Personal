@@ -1,3 +1,4 @@
+uuid: 3cc89134-74df-452f-9c86-21a53c2b8c12
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - gnode
     - group
     - node
+_core:
+  default_config_hash: 50gd6UKSddlPxEUbaEG7l1ZHe5Akog488RFK-jAUkCM
 id: group_nodes
 label: 'Group nodes'
 module: gnode
@@ -19,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Nodes
+      title: Content
       fields:
         title:
           id: title
@@ -615,6 +618,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 50
           total_pages: null
           id: 0
@@ -632,7 +636,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -729,9 +732,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              group_admin: '0'
           is_grouped: true
           group_info:
             label: 'Published status'
@@ -780,9 +780,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              group_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -891,6 +888,7 @@ display:
           empty_table: true
           caption: ''
           description: ''
+          class: ''
       row:
         type: fields
         options:
@@ -942,7 +940,7 @@ display:
       path: group/%group/nodes
       menu:
         type: tab
-        title: Nodes
+        title: Content
         description: ''
         weight: 25
         enabled: true

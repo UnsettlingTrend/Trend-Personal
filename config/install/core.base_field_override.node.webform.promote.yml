@@ -1,8 +1,11 @@
+uuid: 6708cef1-2252-4b20-bcb9-d169ec7aee66
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.webform
+_core:
+  default_config_hash: FvXJkxryo6J_0TQRlb5Z77Ge-sim5GHzCI1Ft3kZu-4
 id: node.webform.promote
 field_name: promote
 entity_type: node

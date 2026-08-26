@@ -1,3 +1,4 @@
+uuid: bd08d7a3-1c8e-4909-86d8-f8c1da11808e
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - system
   theme:
     - ut_material
+_core:
+  default_config_hash: ox8RSuHRfHWq5LPi6NqQaFpNucZ5zuBQ6zGu4XFuZR4
 id: ut_material_footer
 theme: ut_material
 region: footer

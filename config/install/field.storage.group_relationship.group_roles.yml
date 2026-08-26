@@ -1,8 +1,11 @@
+uuid: ff3a4d35-42ef-45dc-9934-e9e03a13591b
 langcode: en
 status: true
 dependencies:
   module:
     - group
+_core:
+  default_config_hash: fflZgd81k910MmV3_gPZaFhuXnV9qflFVT6yo28Xj_Q
 id: group_relationship.group_roles
 field_name: group_roles
 entity_type: group_relationship

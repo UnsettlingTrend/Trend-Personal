@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: I8SHIpIhPwREqOfhpKYny_3PbpnwIq0U8Zx409hP2L0
 enable_notifications: true
 notify_by_default: true
 notify_when_using: 'no'

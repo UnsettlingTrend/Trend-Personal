@@ -1,6 +1,9 @@
+uuid: 4d34f0ae-f42c-494c-8b03-39bb398a9868
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: n-FuFxlplOQec-lc4SrvoR5ne_l_ORg0H75pc1-yY2Q
 id: text_phonetic_en_7_0_0
 label: 'Fulltext Phonetic English'
 minimum_solr_version: 7.0.0

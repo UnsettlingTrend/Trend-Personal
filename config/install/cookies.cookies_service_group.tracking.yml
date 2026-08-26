@@ -1,6 +1,9 @@
+uuid: 9718472c-147b-4649-b5db-3da049e9f2ea
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: _gYDe3qoEc6L5uYR6zhu5V-3ARLlyis9gl1diq7Tnf4
 id: tracking
 label: Tracking
 weight: 10

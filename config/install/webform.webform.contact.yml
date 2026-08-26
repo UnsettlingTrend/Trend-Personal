@@ -1,9 +1,12 @@
+uuid: 02f6efef-a0fa-4ede-8990-57697e9f3803
 langcode: en
 status: open
 dependencies:
   enforced:
     module:
       - webform
+_core:
+  default_config_hash: Q4QShRpLvlheaOjtXj4lKYXCOGMiuBopVI6GYCCWRK8
 weight: 0
 open: null
 close: null

@@ -1,3 +1,4 @@
+uuid: b8153011-f020-489f-96c5-79463fb855e7
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.field.message.private_message_notification.field_message_pm_thread
     - field.field.message.private_message_notification.field_message_private_message
     - message.template.private_message_notification
+_core:
+  default_config_hash: wnjKbEVFypVwQ3dhv3vS5fccO-nmPwGZ1mYzjb7BuNo
 id: message.private_message_notification.mail_subject
 targetEntityType: message
 bundle: private_message_notification

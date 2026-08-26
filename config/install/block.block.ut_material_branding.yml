@@ -1,3 +1,4 @@
+uuid: def1c255-f1d5-48ac-ab95-ecc1027d8584
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - ut_material
+_core:
+  default_config_hash: 79xUmyghHaxteNsSpzlGXlQG60IZTcw6NaeZIaQcsMI
 id: ut_material_branding
 theme: ut_material
 region: navbar

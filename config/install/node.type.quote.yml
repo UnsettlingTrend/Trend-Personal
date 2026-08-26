@@ -1,3 +1,4 @@
+uuid: 6bc765c7-b9c6-4008-9e3c-6a8ab98a5e15
 langcode: en
 status: true
 dependencies:
@@ -13,4 +14,4 @@ description: 'An interesting <em>quote</em>.'
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

@@ -1,3 +1,4 @@
+uuid: e43ce0f2-7afa-4c0c-8a26-12dfedbe5bc4
 langcode: en
 status: true
 dependencies:
@@ -8,16 +9,20 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_ingredients
     - field.storage.node.field_issues
+    - field.storage.node.field_paragraph
     - field.storage.node.field_paragraphs
     - field.storage.node.field_prep_time
     - field.storage.node.field_servings
     - field.storage.node.field_subtitle
     - field.storage.node.field_tags
     - field.storage.node.webform
+    - field.storage.paragraph.field_ingredient
     - search_api.server.solr
   module:
     - node
+    - paragraphs
     - search_api_solr
+    - taxonomy
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -70,6 +75,15 @@ name: Content
 description: ''
 read_only: false
 field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: union
+      separator: |
+
+      fields: {  }
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -114,14 +128,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_image
-  field_ingredients:
-    label: Ingredients
+  field_ingredient:
+    label: 'Ingredients » Paragraph » Ingredient'
     datasource_id: 'entity:node'
-    property_path: field_ingredients
+    property_path: 'field_ingredients:entity:field_ingredient'
     type: integer
     dependencies:
       config:
         - field.storage.node.field_ingredients
+        - field.storage.paragraph.field_ingredient
+      module:
+        - paragraphs
   field_issues:
     label: Issues
     datasource_id: 'entity:node'
@@ -130,6 +147,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_issues
+  field_paragraph:
+    label: Paragraph
+    datasource_id: 'entity:node'
+    property_path: field_paragraph
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_paragraph
   field_paragraphs:
     label: Paragraphs
     datasource_id: 'entity:node'
@@ -170,6 +195,18 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
+  name:
+    label: 'Ingredients » Paragraph » Ingredient » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_ingredients:entity:field_ingredient:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_ingredients
+        - field.storage.paragraph.field_ingredient
+      module:
+        - paragraphs
+        - taxonomy
   nid:
     label: ID
     datasource_id: 'entity:node'
@@ -210,6 +247,26 @@ field_settings:
     dependencies:
       module:
         - node
+  status_published:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  tid:
+    label: 'Ingredients » Paragraph » Ingredient » Taxonomy term » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_ingredients:entity:field_ingredient:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ingredients
+        - field.storage.paragraph.field_ingredient
+      module:
+        - paragraphs
+        - taxonomy
   title:
     label: Title
     datasource_id: 'entity:node'

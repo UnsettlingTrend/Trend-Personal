@@ -1,3 +1,4 @@
+uuid: 2d2b3aa0-1cc4-48b7-a933-d2a79f703c87
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   module:
     - private_message
     - text
+_core:
+  default_config_hash: DSe40vfjJBrkIMbZHHW3VnRrZh3v25yhysRszdjwuwY
 id: private_message.private_message.inbox
 targetEntityType: private_message
 bundle: private_message

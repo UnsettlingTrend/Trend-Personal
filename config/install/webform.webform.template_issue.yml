@@ -1,9 +1,12 @@
+uuid: 5e94001e-8393-4731-8860-eb858bfea384
 langcode: en
 status: closed
 dependencies:
   enforced:
     module:
       - webform_templates
+_core:
+  default_config_hash: 249aTht3EfGSEt5Qa2e4Pv7wfm2_9R1lTm5g0cEQWp0
 weight: 0
 open: null
 close: null

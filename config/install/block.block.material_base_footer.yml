@@ -1,3 +1,4 @@
+uuid: a2808ea7-428b-4827-b44b-113792b08016
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - system
   theme:
     - material_base
+_core:
+  default_config_hash: BY0I3jGENWjRuUG77_qLoEpD3Sl_u2IMz_51NERnycg
 id: material_base_footer
 theme: material_base
 region: footer

@@ -1,3 +1,4 @@
+uuid: 71e59714-474d-476c-80f4-4e9efc693b93
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - system
   theme:
     - material_base_mdc
+_core:
+  default_config_hash: m1DIDejgzkUrJYX63ezfpINg4mBTPGQ36kTVM4P21ZA
 id: material_base_mdc_main_menu
 theme: material_base_mdc
 region: navbar

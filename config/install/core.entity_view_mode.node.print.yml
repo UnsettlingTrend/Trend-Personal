@@ -1,3 +1,4 @@
+uuid: e3eec08c-bd96-4b07-8f8f-3119dca5c3c6
 langcode: en
 status: false
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   enforced:
     module:
       - book
+_core:
+  default_config_hash: ERjobPGdPFAM9p5cmQIcJzk-0cY-1mE1OV_pKmMlJaE
 id: node.print
 label: Print
 description: ''

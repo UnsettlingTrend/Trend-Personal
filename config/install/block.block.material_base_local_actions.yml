@@ -1,8 +1,11 @@
+uuid: 65c8ec12-d6b0-4ddb-9494-8961708c39b5
 langcode: en
 status: true
 dependencies:
   theme:
     - material_base
+_core:
+  default_config_hash: CcSHRSW-Ww8Mf355YMEKP8sH4999aCfMLv0QI37-SwM
 id: material_base_local_actions
 theme: material_base
 region: content

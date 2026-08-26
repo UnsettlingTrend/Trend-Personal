@@ -1,3 +1,4 @@
+uuid: 190117d0-3d69-46ed-adbf-2a17a65cff91
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: bGxZZFF3KZ6wrBM9gs1atSH4ilcr0rPmwxiMzlcZa3U
 name: Event
 type: event
 description: 'An <em>event</em> happening at a particular place and time.'

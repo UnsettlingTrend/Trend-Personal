@@ -1,3 +1,4 @@
+uuid: 88021c66-9432-4116-a12a-7c95e1958026
 langcode: en
 status: true
 dependencies:
@@ -11,6 +12,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
+_core:
+  default_config_hash: BuY_3PjmYtRTSuvyFORJZUe0-TQiNXEE6yYQ_dkjxW8
 name: Webform
 type: webform
 description: 'A basic page with a <em>webform</em> attached.'
