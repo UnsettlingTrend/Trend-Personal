@@ -1,0 +1,10 @@
+name: 'Trend Personal — Journal'
+description: 'Adds the journal entry content type — a dated, auto-titled personal log entry built from text paragraphs. Requires the trend_personal base.'
+type: 'Content type'
+
+# Apply the trend_personal base recipe first (it is the site install), then this.
+install:
+  - auto_entitylabel
+
+config:
+  strict: false

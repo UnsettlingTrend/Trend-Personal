@@ -1,0 +1,42 @@
+name: 'Trend Personal — Place'
+description: 'Adds the place content type: a physical location with a US address, auto-geocoded coordinates, and a location-type taxonomy. Requires the trend_personal base.'
+type: 'Content type'
+
+# Apply the trend_personal base recipe first (it is the site install), then this.
+install:
+  - address
+  - geofield
+  - geocoder
+  - geocoder_field
+  - geocoder_address
+  - geocoder_geofield
+  - geolocation
+  - geolocation_geofield
+  - geolocation_address
+  - geolocation_google_maps
+  - geolocation_google_static_maps
+  - geolocation_leaflet
+  - geolocation_geometry
+  - geolocation_geometry_data
+  - leaflet
+  - leaflet_more_maps
+  - leaflet_more_markers
+  - search_api_location
+  - search_api_location_geocoder
+  - search_api_location_views
+
+input:
+  google_maps_api_key:
+    description: 'Google Maps Platform API key used to geocode place addresses.'
+    data_type: string
+    default:
+      source: env
+      env: GOOGLE_MAPS_API_KEY
+      fallback: ''
+
+config:
+  strict: false
+  actions:
+    geocoder.geocoder_provider.googlemaps:
+      simpleConfigUpdate:
+        configuration.apiKey: ${google_maps_api_key}

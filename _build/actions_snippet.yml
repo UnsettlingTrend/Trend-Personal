@@ -1,0 +1,99 @@
+# Paste this under `config:` in recipes/trend_personal/recipe.yml once the
+# bundled base config installs cleanly. Keep `strict: false`.
+actions:
+  system.theme:
+    simpleConfigUpdate:
+      default: ut_base
+      admin: gin
+  node.settings:
+    simpleConfigUpdate:
+      use_admin_theme: true
+  user.settings:
+    simpleConfigUpdate:
+      register: visitors_admin_approval
+      verify_mail: true
+  pathauto.settings:
+    simpleConfigUpdate:
+      enabled_entity_types:
+        - user
+  user.role.anonymous:
+    grantPermissions:
+      - 'access comments'
+      - 'access content'
+      - 'access printer-friendly version'
+      - 'use text format limited_html'
+      - 'use text format restricted_html'
+      - 'view any article content'
+      - 'view any landing_page content'
+      - 'view any page content'
+      - 'view any webform content'
+      - 'view media'
+      - 'view paragraph content block'
+      - 'view paragraph content from_library'
+      - 'view paragraph content layout'
+      - 'view paragraph content media'
+      - 'view paragraph content section'
+      - 'view paragraph content text_area'
+      - 'view paragraph content text_list'
+      - 'view paragraph content view'
+  user.role.authenticated:
+    grantPermissions:
+      - 'access administration pages'
+      - 'access comments'
+      - 'access content'
+      - 'access contextual links'
+      - 'access printer-friendly version'
+      - 'access toolbar'
+      - 'access user profiles'
+      - 'change own username'
+      - 'create audio media'
+      - 'create document media'
+      - 'create image media'
+      - 'create media'
+      - 'create remote_video media'
+      - 'create terms in tags'
+      - 'create url aliases'
+      - 'create video media'
+      - 'create paragraph content media'
+      - 'create paragraph content section'
+      - 'create paragraph content text_area'
+      - 'delete media'
+      - 'delete own files'
+      - 'edit terms in tags'
+      - 'post comments'
+      - 'skip CAPTCHA'
+      - 'skip comment approval'
+      - 'update media'
+      - 'use editorial transition create_new_draft'
+      - 'use editorial transition publish'
+      - 'use editorial transition archived_draft'
+      - 'use editorial transition archived_published'
+      - 'use text format basic_html'
+      - 'use text format limited_html'
+      - 'use text format webform_default'
+      - 'view any article content'
+      - 'view any landing_page content'
+      - 'view any page content'
+      - 'view any webform content'
+      - 'view latest version'
+      - 'view media'
+      - 'view own unpublished content'
+      - 'view the administration theme'
+  user.role.content_creator:
+    grantPermissions:
+      - 'create article content'
+      - 'create landing_page content'
+      - 'create page content'
+      - 'create webform content'
+      - 'delete any article content'
+      - 'delete any landing_page content'
+      - 'delete any page content'
+      - 'delete any webform content'
+      - 'edit any article content'
+      - 'edit any landing_page content'
+      - 'edit any page content'
+      - 'edit any webform content'
+      - 'revert article revisions'
+      - 'revert landing_page revisions'
+      - 'revert page revisions'
+      - 'view all revisions'

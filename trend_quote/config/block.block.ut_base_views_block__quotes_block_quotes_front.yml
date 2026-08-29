@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.quotes
+  module:
+    - views
+  theme:
+    - ut_base
+id: ut_base_views_block__quotes_block_quotes_front
+theme: ut_base
+region: pre_footer
+weight: 0
+provider: null
+plugin: 'views_block:quotes-block_quotes_front'
+settings:
+  id: 'views_block:quotes-block_quotes_front'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+  exposed: {  }
+visibility: {  }

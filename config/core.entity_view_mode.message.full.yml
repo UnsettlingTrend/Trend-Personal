@@ -1,0 +1,10 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - message
+id: message.full
+label: 'Full content'
+description: ''
+targetEntityType: message
+cache: true

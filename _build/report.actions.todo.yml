@@ -1,0 +1,947 @@
+_desired_values_for_overrides:
+  admin_toolbar.settings:
+    menu_depth: 4
+    hoverintent_behavior:
+      enabled: true
+      timeout: 500
+    enable_toggle_shortcut: false
+  admin_toolbar_tools.settings:
+    max_bundle_number: 20
+  automated_cron.settings:
+    interval: 3600
+  chosen.settings:
+    minimum_single: 20
+    minimum_multiple: 20
+    disable_search_threshold: 0
+    minimum_width: 0
+    max_shown_results: null
+    use_relative_width: false
+    jquery_selector: 'select:visible'
+    search_contains: true
+    disable_search: false
+    allow_single_deselect: true
+    add_helper_buttons: false
+    disabled_themes:
+      claro: '0'
+      gin: '0'
+      ut_base: '0'
+    chosen_include: 2
+    placeholder_text_multiple: 'Choose some options'
+    placeholder_text_single: 'Choose an option'
+    no_results_text: 'No results match'
+  cookies.config:
+    cookie_name: cookiesjsr
+    cookie_expires: 365
+    cookie_domain: ''
+    cookie_secure: false
+    cookie_same_site: Lax
+    open_settings_hash: editCookieSettings
+    show_deny_all: true
+    settings_as_link: false
+    group_consent: true
+    cookie_docs: true
+    lib_load_from_cdn: true
+    lib_scroll_limit: 250
+    use_default_styles: true
+    store_auth_user_consent: false
+  cookies.texts:
+    langcode: en
+    bannerText: 'We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose "ACCEPT ALL", you consent to the use of all cookies. You can accept and reject individual cookie types and  revoke your consent for the future at any time under "Settings".'
+    privacyPolicy: 'Privacy policy'
+    privacyUri: /privacy
+    imprint: Imprint
+    imprintUri: /imprint
+    cookieDocs: 'Cookie documentation'
+    cookieDocsUri: /cookies/documentation
+    officialWebsite: 'Official website'
+    denyAll: 'Deny all'
+    alwaysActive: 'Always active'
+    settings: 'Cookie settings'
+    acceptAll: 'Accept all'
+    requiredCookies: 'Required cookies'
+    cookieSettings: 'Cookie settings'
+    close: Close
+    readMore: 'Read more'
+    allowed: allowed
+    denied: denied
+    settingsAllServices: 'Settings for all services'
+    saveSettings: Save
+    default_langcode: en
+    disclaimerText: 'All cookie information is subject to change by the service providers. We update this information regularly.'
+    disclaimerTextPosition: above
+    processorDetailsLabel: 'Processor Company Details'
+    processorLabel: Company
+    processorWebsiteUrlLabel: 'Company Website'
+    processorPrivacyPolicyUrlLabel: 'Company Privacy Policy'
+    processorCookiePolicyUrlLabel: 'Company Cookie Policy'
+    processorContactLabel: 'Data Protection Contact Details'
+    placeholderAcceptAllText: 'Accept All Cookies'
+  core.date_format.fallback:
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: fallback
+    label: 'Fallback date format'
+    locked: true
+    pattern: 'D, m/d/Y - H:i'
+  core.date_format.long:
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: long
+    label: 'Default long date'
+    locked: false
+    pattern: 'l, F j, Y - H:i'
+  core.date_format.medium:
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: medium
+    label: 'Default medium date'
+    locked: false
+    pattern: 'D, m/d/Y - H:i'
+  core.date_format.short:
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: short
+    label: 'Default short date'
+    locked: false
+    pattern: 'm/d/Y - H:i'
+  diff.settings:
+    langcode: en
+    general_settings:
+      radio_behavior: simple
+      context_lines_leading: 1
+      context_lines_trailing: 1
+      revision_pager_limit: 50
+      layout_plugins:
+        visual_inline:
+          enabled: true
+          weight: 0
+        split_fields:
+          enabled: true
+          weight: 1
+        unified_fields:
+          enabled: true
+          weight: 2
+      visual_default_view_mode: full
+      visual_inline_theme: default
+  easy_breadcrumb.settings:
+    langcode: en
+    applies_admin_routes: true
+    include_invalid_paths: false
+    excluded_paths: ''
+    replaced_titles: ''
+    custom_paths: ''
+    include_home_segment: true
+    alternative_title_field: field_breadcrumb_title
+    home_segment_title: Home
+    home_segment_keep: false
+    include_title_segment: true
+    title_from_page_when_available: true
+    title_segment_as_link: false
+    use_menu_title_as_fallback: false
+    use_page_title_as_menu_title_fallback: false
+    remove_repeated_segments: true
+    language_path_prefix_as_segment: false
+    absolute_paths: false
+    hide_single_home_item: false
+    term_hierarchy: false
+    use_site_title: false
+    add_structured_data_json_ld: false
+    capitalizator_mode: ucwords
+    capitalizator_ignored_words:
+      - of
+      - and
+      - or
+      - de
+      - del
+      - 'y'
+      - o
+      - a
+    capitalizator_forced_words: {  }
+    capitalizator_forced_words_case_sensitivity: true
+    capitalizator_forced_words_first_letter: false
+    follow_redirects: true
+    limit_segment_display: false
+    segment_display_limit: null
+    segment_display_minimum: 1
+    truncator_mode: false
+    truncator_length: 100
+    truncator_dots: true
+  entity_usage.settings:
+    local_task_enabled_entity_types:
+      - paragraphs_library_item
+    track_enabled_base_fields: false
+    edit_warning_message_entity_types:
+      - paragraphs_library_item
+    delete_warning_message_entity_types:
+      - paragraphs_library_item
+    usage_controller_items_per_page: 25
+  file.settings:
+    description:
+      type: textfield
+      length: 128
+    icon:
+      directory: core/modules/file/icons
+    make_unused_managed_files_temporary: true
+    filename_sanitization:
+      transliterate: true
+      replace_whitespace: true
+      replace_non_alphanumeric: true
+      deduplicate_separators: true
+      lowercase: true
+      replacement_character: '-'
+  gin.settings:
+    favicon:
+      use_default: true
+    features:
+      comment_user_picture: true
+      comment_user_verification: true
+      favicon: true
+      node_user_picture: true
+    logo:
+      use_default: true
+    third_party_settings:
+      shortcut:
+        module_link: true
+    preset_accent_color: light_blue
+    preset_focus_color: accent
+    enable_darkmode: auto
+    classic_toolbar: vertical
+    secondary_toolbar_frontend: true
+    high_contrast_mode: false
+    accent_color: ''
+    focus_color: ''
+    layout_density: medium
+    show_description_toggle: false
+    show_user_theme_settings: false
+    sticky_action_buttons: true
+  image_captcha.settings:
+    image_captcha_fonts_preview_map_cache: {  }
+    image_captcha_fonts:
+      - 986462a9e165423b12587d83a363091b837f54db5d7337cb3da3f97f54104fbb
+      - 3dbed886c81a681a313bc6297f53db5699401194490d38621f05c7bdf06cf1f5
+    image_captcha_font_size: 30
+    image_captcha_character_spacing: '1.2'
+    image_captcha_image_allowed_chars: aAbBCdEeFfGHhijKLMmNPQRrSTtWXYZ23456789
+    image_captcha_code_length: 5
+    image_captcha_rtl_support: 0
+    image_captcha_background_color: '#ffffff'
+    image_captcha_foreground_color: '#000000'
+    image_captcha_foreground_color_randomness: 100
+    image_captcha_file_format: 1
+    image_captcha_distortion_amplitude: 0
+    image_captcha_bilinear_interpolation: 0
+    image_captcha_dot_noise: 0
+    image_captcha_line_noise: 0
+    image_captcha_noise_level: 5
+  image_widget_crop.settings:
+    settings:
+      library_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js'
+      css_url: 'https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css'
+      crop_preview_image_style: max_1300x1300
+      crop_list:
+        full_width: full_width
+      crop_types_required:
+        full_width: full_width
+      warn_multiple_usages: false
+      show_default_crop: true
+      show_crop_area: false
+      notify_apply: false
+      notify_update: true
+  layout_paragraphs.settings:
+    show_paragraph_labels: 0
+    show_layout_labels: 0
+    show_layout_plugin_labels: 0
+    paragraph_behaviors_label: Behaviors
+    paragraph_behaviors_position: -99
+    empty_message: 'No components to add.'
+    button_labels:
+      enable_tooltips: false
+      default: 'Add Component'
+      root: 'Add Section'
+      section: ''
+  media.settings:
+    icon_base_uri: 'public://media-icons/generic'
+    iframe_domain: null
+    oembed_providers_url: 'https://oembed.com/providers.json'
+    standalone_url: true
+  name.settings:
+    component_required_marker: '*'
+    sep1: ' '
+    sep2: ', '
+    sep3: ''
+    user_preferred: field_name
+  pathauto.settings:
+    enabled_entity_types:
+      - user
+    punctuation:
+      hyphen: 1
+    verbose: false
+    separator: '-'
+    max_length: 100
+    max_component_length: 100
+    transliterate: true
+    reduce_ascii: false
+    case: true
+    ignore_words: 'a, an, as, at, before, but, by, for, from, is, in, into, like, of, off, on, onto, per, since, than, the, this, that, to, up, via, with'
+    update_action: 2
+    safe_tokens:
+      - alias
+      - path
+      - join-path
+      - login-url
+      - url
+      - url-brief
+  system.date:
+    first_day: 0
+    country:
+      default: US
+    timezone:
+      default: America/New_York
+      user:
+        configurable: true
+        default: 0
+        warn: false
+  system.theme:
+    admin: gin
+    default: ut_material
+  user.mail:
+    langcode: en
+    cancel_confirm:
+      subject: 'Account cancellation request for [user:display-name] at [site:name]'
+      body: "[user:display-name]\r\n\r\nA request to cancel your account has been made at [site:name].\r\n\r\nYou may now cancel your account on [site:url-brief] by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:cancel-url]\r\n\r\nNOTE: The cancellation of your account is not reversible.\r\n\r\nThis link expires in one day and nothing will happen if it is not used.\r\n\r\n--  [site:name] team"
+    password_reset:
+      subject: 'Replacement login information for [user:display-name] at [site:name]'
+      body: "[user:display-name],\r\n\r\nA request to reset the password for your account has been made at [site:name].\r\n\r\nYou may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it's not used.\r\n\r\n--  [site:name] team"
+    register_admin_created:
+      subject: 'An administrator created an account for you at [site:name]'
+      body: "[user:display-name],\r\n\r\nA site administrator at [site:name] has created an account for you. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [user:name]\r\npassword: Your password\r\n\r\n--  [site:name] team"
+    register_no_approval_required:
+      subject: 'Account details for [user:display-name] at [site:name]'
+      body: "[user:display-name],\r\n\r\nThank you for registering at [site:name]. You may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [user:name]\r\npassword: Your password\r\n\r\n--  [site:name] team"
+    register_pending_approval:
+      subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+      body: "[user:display-name],\r\n\r\nThank you for registering at [site:name]. Your application for an account is currently pending approval. Once it has been approved, you will receive another email containing information about how to log in, set your password, and other details.\r\n\r\n--  [site:name] team"
+    register_pending_approval_admin:
+      subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
+      body: "[user:display-name] has applied for an account.\r\n\r\n[user:edit-url]"
+    status_activated:
+      subject: 'Account details for [user:display-name] at [site:name] (approved)'
+      body: "[user:display-name],\r\n\r\nYour account at [site:name] has been activated.\r\n\r\nYou may now log in by clicking this link or copying and pasting it into your browser:\r\n\r\n[user:one-time-login-url]\r\n\r\nThis link can only be used once to log in and will lead you to a page where you can set your password.\r\n\r\nAfter setting your password, you will be able to log in at [site:login-url] in the future using:\r\n\r\nusername: [user:account-name]\r\npassword: Your password\r\n\r\n--  [site:name] team"
+    status_blocked:
+      subject: 'Account details for [user:display-name] at [site:name] (blocked)'
+      body: "[user:display-name],\r\n\r\nYour account on [site:name] has been blocked.\r\n\r\n--  [site:name] team"
+    status_canceled:
+      subject: 'Account details for [user:display-name] at [site:name] (canceled)'
+      body: "[user:display-name],\r\n\r\nYour account on [site:name] has been canceled.\r\n\r\n--  [site:name] team"
+  user.role.anonymous:
+    langcode: en
+    status: true
+    dependencies:
+      config:
+        - filter.format.limited_html
+        - filter.format.restricted_html
+        - node.type.article
+        - node.type.event
+        - node.type.issue
+        - node.type.journal_entry
+        - node.type.landing_page
+        - node.type.page
+        - node.type.place
+        - node.type.quote
+        - node.type.recipe
+        - node.type.webform
+      module:
+        - comment
+        - filter
+        - media
+        - node_view_permissions
+        - paragraphs_type_permissions
+        - system
+    id: anonymous
+    label: 'Anonymous user'
+    weight: 0
+    is_admin: false
+    permissions:
+      - 'access comments'
+      - 'access content'
+      - 'access printer-friendly version'
+      - 'use text format limited_html'
+      - 'use text format restricted_html'
+      - 'view any article content'
+      - 'view any event content'
+      - 'view any landing_page content'
+      - 'view any page content'
+      - 'view any place content'
+      - 'view any quote content'
+      - 'view any recipe content'
+      - 'view any webform content'
+      - 'view media'
+      - 'view own article content'
+      - 'view own event content'
+      - 'view own issue content'
+      - 'view own journal_entry content'
+      - 'view own landing_page content'
+      - 'view own page content'
+      - 'view own place content'
+      - 'view own quote content'
+      - 'view own recipe content'
+      - 'view own webform content'
+      - 'view paragraph content block'
+      - 'view paragraph content from_library'
+      - 'view paragraph content ingredient'
+      - 'view paragraph content layout'
+      - 'view paragraph content media'
+      - 'view paragraph content record'
+      - 'view paragraph content section'
+      - 'view paragraph content strava_route'
+      - 'view paragraph content text_area'
+      - 'view paragraph content text_list'
+      - 'view paragraph content view'
+      - 'view race_day content'
+  user.role.authenticated:
+    langcode: en
+    status: true
+    dependencies:
+      config:
+        - filter.format.basic_html
+        - filter.format.limited_html
+        - filter.format.webform_default
+        - media.type.audio
+        - media.type.document
+        - media.type.image
+        - media.type.remote_video
+        - media.type.video
+        - node.type.article
+        - node.type.event
+        - node.type.issue
+        - node.type.journal_entry
+        - node.type.landing_page
+        - node.type.page
+        - node.type.place
+        - node.type.quote
+        - node.type.recipe
+        - node.type.webform
+        - taxonomy.vocabulary.tags
+        - workflows.workflow.editorial
+      module:
+        - captcha
+        - comment
+        - content_moderation
+        - contextual
+        - file
+        - filter
+        - media
+        - node
+        - node_view_permissions
+        - paragraphs_type_permissions
+        - path
+        - system
+        - taxonomy
+        - toolbar
+    id: authenticated
+    label: 'Authenticated user'
+    weight: 1
+    is_admin: false
+    permissions:
+      - 'access administration pages'
+      - 'access ai content suggestion tools'
+      - 'access comments'
+      - 'access content'
+      - 'access contextual links'
+      - 'access printer-friendly version'
+      - 'access toolbar'
+      - 'access user profiles'
+      - 'change own username'
+      - 'create audio media'
+      - 'create document media'
+      - 'create image media'
+      - 'create media'
+      - 'create paragraph content media'
+      - 'create paragraph content race_day_leg_assignment'
+      - 'create paragraph content section'
+      - 'create paragraph content text_area'
+      - 'create remote_video media'
+      - 'create terms in tags'
+      - 'create url aliases'
+      - 'create video media'
+      - 'delete media'
+      - 'delete own article content'
+      - 'delete own audio media'
+      - 'delete own document media'
+      - 'delete own files'
+      - 'delete own image media'
+      - 'delete own remote_video media'
+      - 'delete own video media'
+      - 'delete paragraph content media'
+      - 'delete paragraph content race_day_leg_assignment'
+      - 'delete paragraph content text_area'
+      - 'edit own article content'
+      - 'edit own audio media'
+      - 'edit own document media'
+      - 'edit own image media'
+      - 'edit own remote_video media'
+      - 'edit own video media'
+      - 'edit terms in tags'
+      - 'post comments'
+      - 'report own gps location'
+      - 'skip CAPTCHA'
+      - 'skip comment approval'
+      - 'update media'
+      - 'update paragraph content media'
+      - 'update paragraph content race_day_leg_assignment'
+      - 'update paragraph content text_area'
+      - 'use ai ckeditor'
+      - 'use editorial transition archived_draft'
+      - 'use editorial transition archived_published'
+      - 'use editorial transition create_new_draft'
+      - 'use editorial transition publish'
+      - 'use private messaging system'
+      - 'use text format basic_html'
+      - 'use text format limited_html'
+      - 'use text format webform_default'
+      - 'view any article content'
+      - 'view any event content'
+      - 'view any issue content'
+      - 'view any journal_entry content'
+      - 'view any landing_page content'
+      - 'view any page content'
+      - 'view any place content'
+      - 'view any quote content'
+      - 'view any recipe content'
+      - 'view any webform content'
+      - 'view article revisions'
+      - 'view latest version'
+      - 'view media'
+      - 'view own article content'
+      - 'view own event content'
+      - 'view own issue content'
+      - 'view own journal_entry content'
+      - 'view own landing_page content'
+      - 'view own page content'
+      - 'view own place content'
+      - 'view own quote content'
+      - 'view own recipe content'
+      - 'view own unpublished content'
+      - 'view own unpublished media'
+      - 'view own webform content'
+      - 'view paragraph content block'
+      - 'view paragraph content from_library'
+      - 'view paragraph content ingredient'
+      - 'view paragraph content layout'
+      - 'view paragraph content media'
+      - 'view paragraph content race_day_leg_assignment'
+      - 'view paragraph content record'
+      - 'view paragraph content section'
+      - 'view paragraph content strava_route'
+      - 'view paragraph content text_area'
+      - 'view paragraph content text_list'
+      - 'view paragraph content view'
+      - 'view race_day content'
+      - 'view the administration theme'
+      - 'view user email addresses'
+  user.settings:
+    langcode: en
+    anonymous: Anonymous
+    verify_mail: true
+    notify:
+      cancel_confirm: true
+      password_reset: true
+      status_activated: true
+      status_blocked: false
+      status_canceled: false
+      register_admin_created: true
+      register_no_approval_required: true
+      register_pending_approval: true
+    register: visitors_admin_approval
+    cancel_method: user_cancel_block
+    password_reset_timeout: 86400
+    password_strength: true
+  ut_utilities.settings:
+    default_areas_of_interest:
+      - running
+    allow_social_api_registration: true
+  views.settings:
+    display_extenders: {  }
+    sql_signature: false
+    ui:
+      show:
+        additional_queries: false
+        default_display: true
+        performance_statistics: false
+        preview_information: true
+        sql_query:
+          enabled: true
+          where: above
+        display_embed: false
+      always_live_preview: true
+      exposed_filter_any_label: old_any
+    field_rewrite_elements:
+      div: DIV
+      span: SPAN
+      h1: H1
+      h2: H2
+      h3: H3
+      h4: H4
+      h5: H5
+      h6: H6
+      p: P
+      header: HEADER
+      footer: FOOTER
+      article: ARTICLE
+      section: SECTION
+      aside: ASIDE
+      details: DETAILS
+      blockquote: BLOCKQUOTE
+      figure: FIGURE
+      address: ADDRESS
+      code: CODE
+      pre: PRE
+      var: VAR
+      samp: SAMP
+      kbd: KBD
+      strong: STRONG
+      em: EM
+      del: DEL
+      ins: INS
+      q: Q
+      s: S
+  webform.settings:
+    langcode: en
+    settings:
+      default_status: open
+      default_categories: {  }
+      default_page: true
+      default_page_base_path: /form
+      default_ajax: false
+      default_ajax_progress_type: throbber
+      default_ajax_effect: fade
+      default_ajax_speed: 500
+      default_submit_button_label: Submit
+      default_reset_button_label: Reset
+      default_delete_button_label: Delete
+      default_form_submit_once: false
+      default_form_open_message: 'This form has not yet been opened to submissions.'
+      default_form_close_message: 'Sorry… This form is closed to new submissions.'
+      default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
+      default_form_confidential_message: 'This form is confidential. You must <a href="[site:login-url]/logout?destination=[current-page:url:relative]">Log out</a> to submit it.'
+      default_form_access_denied_message: 'Please login to access this form.'
+      default_form_disable_remote_addr: false
+      default_form_novalidate: false
+      default_form_disable_inline_errors: false
+      default_form_required: false
+      default_form_required_label: 'Indicates required field'
+      default_form_unsaved: false
+      default_form_disable_back: false
+      default_form_submit_back: false
+      default_form_details_toggle: true
+      default_form_file_limit: ''
+      default_form_file_limit_message: "This form's file upload quota of %quota has been exceeded. Please remove some files."
+      default_wizard_prev_button_label: '< Previous'
+      default_wizard_next_button_label: 'Next >'
+      default_wizard_start_label: Start
+      default_wizard_confirmation_label: Complete
+      default_wizard_toggle_show_label: 'Show all'
+      default_wizard_toggle_hide_label: 'Hide all'
+      default_preview_next_button_label: Preview
+      default_preview_prev_button_label: '< Previous'
+      default_preview_label: Preview
+      default_preview_title: '[webform:title]: Preview'
+      default_preview_message: 'Please review your submission. Your submission is not complete until you press the "Submit" button!'
+      default_draft_button_label: 'Save Draft'
+      default_draft_saved_message: 'Submission saved. You may return to this form later and it will restore the current values.'
+      default_draft_loaded_message: 'A partially-completed form was found. Please complete the remaining portions.'
+      default_draft_pending_single_message: 'You have a pending draft for this webform. <a href="#">Load your pending draft</a>.'
+      default_draft_pending_multiple_message: 'You have pending drafts for this webform. <a href="#">View your pending drafts</a>.'
+      default_confirmation_message: 'New submission added to [webform:title].'
+      default_confirmation_back_label: 'Back to form'
+      default_confirmation_noindex: true
+      default_limit_total_message: 'No more submissions are permitted.'
+      default_limit_user_message: 'No more submissions are permitted.'
+      default_submission_label: '[webform_submission:submitted-to]: Submission #[webform_submission:serial]'
+      default_submission_log: false
+      default_submission_views: {  }
+      default_submission_views_replace:
+        global_routes:
+          - entity.webform_submission.collection
+          - entity.webform_submission.user
+        webform_routes:
+          - entity.webform.results_submissions
+          - entity.webform.user.drafts
+          - entity.webform.user.submissions
+        node_routes:
+          - entity.node.webform.results_submissions
+          - entity.node.webform.user.drafts
+          - entity.node.webform.user.submissions
+      default_results_customize: false
+      default_submission_access_denied_message: 'Please login to access this submission.'
+      default_submission_exception_message: 'Unable to process this submission. Please contact the site administrator.'
+      default_submission_locked_message: 'This submission has been locked.'
+      default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
+      default_previous_submissions_message: 'You have already submitted this webform. <a href="#">View your previous submissions</a>.'
+      default_autofill_message: 'This submission has been autofilled with your previous submission.'
+      form_classes: |
+        container-inline clearfix
+        form--inline clearfix
+        messages messages--error
+        messages messages--warning
+        messages messages--status
+      button_classes: ''
+      preview_classes: |
+        messages messages--error
+        messages messages--warning
+        messages messages--status
+      confirmation_classes: |
+        messages messages--error
+        messages messages--warning
+        messages messages--status
+      confirmation_back_classes: |
+        button
+      default_share: false
+      default_share_node: false
+      default_share_theme_name: ''
+      webform_bulk_form: true
+      webform_bulk_form_actions:
+        - webform_open_action
+        - webform_close_action
+        - webform_archive_action
+        - webform_unarchive_action
+        - webform_delete_action
+      webform_submission_bulk_form: true
+      webform_submission_bulk_form_actions:
+        - webform_submission_make_sticky_action
+        - webform_submission_make_unsticky_action
+        - webform_submission_make_lock_action
+        - webform_submission_make_unlock_action
+        - webform_submission_delete_action
+      dialog: false
+      dialog_options:
+        narrow:
+          title: Narrow
+          width: 600
+        normal:
+          title: Normal
+          width: 800
+        wide:
+          title: Wide
+          width: 1000
+    assets:
+      css: ''
+      javascript: ''
+    form:
+      limit: 50
+      filter_category: ''
+      filter_state: ''
+    element:
+      machine_name_pattern: a-z0-9_
+      empty_message: '{Empty}'
+      allowed_tags: admin
+      wrapper_classes: |
+        container-inline clearfix
+        form--inline clearfix
+        messages messages--error
+        messages messages--warning
+        messages messages--status
+      classes: |
+        container-inline clearfix
+        form--inline clearfix
+        messages messages--error
+        messages messages--warning
+        messages messages--status
+      horizontal_rule_classes: |
+        webform-horizontal-rule--solid
+        webform-horizontal-rule--dashed
+        webform-horizontal-rule--dotted
+        webform-horizontal-rule--gradient
+        webform-horizontal-rule--thin
+        webform-horizontal-rule--medium
+        webform-horizontal-rule--thick
+        webform-horizontal-rule--flaired
+        webform-horizontal-rule--glyph
+      default_description_display: ''
+      default_more_title: More
+      default_section_title_tag: h2
+      default_empty_option: true
+      default_empty_option_required: ''
+      default_empty_option_optional: ''
+      excluded_elements:
+        password: password
+        password_confirm: password_confirm
+    html_editor:
+      disabled: false
+      element_format: webform_default
+      mail_format: webform_default
+      tidy: true
+      make_unused_managed_files_temporary: true
+    file:
+      file_public: false
+      file_private_redirect: true
+      file_private_redirect_message: 'Please login to access the uploaded file.'
+      default_max_filesize: ''
+      default_managed_file_extensions: 'gif jpg jpeg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 mp4 ogg wav bz2 dmg gz jar rar sit svg tar zip'
+      default_image_file_extensions: 'gif jpg jpeg png'
+      default_video_file_extensions: 'avi mov mp4 ogg wav webm'
+      default_audio_file_extensions: 'mp3 ogg wav'
+      default_document_file_extensions: 'txt rtf pdf doc docx odt ppt pptx odp xls xlsx ods'
+      make_unused_managed_files_temporary: true
+      delete_temporary_managed_files: true
+    format: {  }
+    mail:
+      default_to_mail: '[site:mail]'
+      default_from_mail: '[site:mail]'
+      default_from_name: '[site:name]'
+      default_reply_to: ''
+      default_return_path: ''
+      default_sender_mail: ''
+      default_sender_name: ''
+      default_subject: 'Webform submission from: [webform_submission:source-title]'
+      default_body_text: |
+        Submitted on [webform_submission:created]
+        Submitted by: [webform_submission:user]
+
+        Submitted values are:
+        [webform_submission:values]
+      default_body_html: |
+        <p>Submitted on [webform_submission:created]</p>
+        <p>Submitted by: [webform_submission:user]</p>
+        <p>Submitted values are:</p>
+        [webform_submission:values]
+      roles: {  }
+    export:
+      temp_directory: ''
+      exporter: delimited
+      delimiter: ','
+      multiple_delimiter: ;
+      excel: false
+      archive_type: tar
+      header_format: label
+      header_prefix: true
+      header_prefix_key_delimiter: __
+      header_prefix_label_delimiter: ': '
+      entity_reference_items:
+        - id
+        - title
+        - url
+      options_single_format: compact
+      options_multiple_format: compact
+      options_item_format: label
+      likert_answers_format: label
+      signature_format: status
+      composite_element_item_format: label
+      excluded_exporters: {  }
+    handler:
+      excluded_handlers: {  }
+    variant:
+      excluded_variants: {  }
+    batch:
+      default_batch_export_size: 500
+      default_batch_import_size: 100
+      default_batch_update_size: 500
+      default_batch_delete_size: 500
+      default_batch_email_size: 500
+    purge:
+      cron_size: 100
+    test:
+      types: |
+        checkbox:
+          - true
+        color:
+          - '#ffffcc'
+          - '#ffffcc'
+          - '#ccffff'
+        email:
+          - 'example@example.com'
+          - 'test@test.com'
+          - 'random@random.com'
+        language_select:
+          - en
+        machine_name:
+          - 'loremipsum'
+          - 'oratione'
+          - 'dixisset'
+        tel:
+          - '123-456-7890'
+          - '098-765-4321'
+        textarea:
+          - 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Primum Theophrasti, Strato, physicum se voluit; Id mihi magnum videtur. Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.'
+          - 'Huius, Lyco, oratione locuples, rebus ipsis ielunior. Duo Reges: constructio interrete. Sed haec in pueris; Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Sapiens autem semper beatus est et est aliquando in dolore; Immo videri fortasse. Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Et ille ridens: Video, inquit, quid agas;'
+          - 'Quae cum dixisset, finem ille. Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Progredientibus autem aetatibus sensim tardeve potius quasi nosmet ipsos cognoscimus. Gloriosa ostentatio in constituendo summo bono. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Duarum enim vitarum nobis erunt instituta capienda. Comprehensum, quod cognitum non habet? Qui enim existimabit posse se miserum esse beatus non erit. Causa autem fuit huc veniendi ut quosdam hinc libros promerem. Nunc omni virtuti vitium contrario nomine opponitur.'
+        text_format:
+          - value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Negat esse eam, inquit, propter se expetendam. Primum Theophrasti, Strato, physicum se voluit; Id mihi magnum videtur. Itaque mihi non satis videmini considerare quod iter sit naturae quaeque progressio. Quare hoc videndum est, possitne nobis hoc ratio philosophorum dare. Est enim tanti philosophi tamque nobilis audacter sua decreta defendere.</p>'
+          - value: '<p>Huius, Lyco, oratione locuples, rebus ipsis ielunior. Duo Reges: constructio interrete. Sed haec in pueris; Sed utrum hortandus es nobis, Luci, inquit, an etiam tua sponte propensus es? Sapiens autem semper beatus est et est aliquando in dolore; Immo videri fortasse. Paulum, cum regem Persem captum adduceret, eodem flumine invectio? Et ille ridens: Video, inquit, quid agas;</p>'
+          - value: '<p>Quae cum dixisset, finem ille. Quamquam non negatis nos intellegere quid sit voluptas, sed quid ille dicat. Progredientibus autem aetatibus sensim tardeve potius quasi nosmet ipsos cognoscimus. Gloriosa ostentatio in constituendo summo bono. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse; Duarum enim vitarum nobis erunt instituta capienda. Comprehensum, quod cognitum non habet? Qui enim existimabit posse se miserum esse beatus non erit. Causa autem fuit huc veniendi ut quosdam hinc libros promerem. Nunc omni virtuti vitium contrario nomine opponitur.</p>'
+        url:
+          - 'http://example.com'
+          - 'http://test.com'
+        webform_email_confirm:
+          - 'example@example.com'
+          - 'test@test.com'
+          - 'random@random.com'
+        webform_email_multiple:
+          - 'example@example.com, test@test.com, random@random.com'
+        webform_time:
+          - '09:00'
+          - '17:00'
+      names: |
+        first_name:
+          - 'John'
+          - 'Paul'
+          - 'Ringo'
+          - 'George'
+        last_name:
+          - 'Lennon'
+          - 'McCartney'
+          - 'Starr'
+          - 'Harrison'
+        address:
+          - '10 Main Street'
+          - '11 Brook Alley Road. APT 1'
+        zip:
+          - '11111'
+          - '12345'
+          - '12345-6789'
+        postal_code:
+          - '11111'
+          - '12345'
+          - '12345-6789'
+        phone:
+          - '123-456-7890'
+          - '098-765-4321'
+        fax:
+          - '123-456-7890'
+          - '098-765-4321'
+        city:
+          - 'Springfield'
+          - 'Pleasantville'
+          - 'Hill Valley'
+        url:
+          - 'http://example.com'
+          - 'http://test.com'
+        default:
+          - 'Loremipsum'
+          - 'Oratione'
+          - 'Dixisset'
+    ui:
+      video_display: dialog
+      help_disabled: false
+      dialog_disabled: false
+      offcanvas_disabled: false
+      promotions_disabled: false
+      support_disabled: false
+      details_save: true
+      description_help: true
+      toolbar_item: false
+    libraries:
+      excluded_libraries:
+        - choices
+        - jquery.chosen
+    requirements:
+      cdn: false
+      clientside_validation: true
+      spam: true
+    third_party_settings:
+      captcha:
+        replace_administration_mode: true

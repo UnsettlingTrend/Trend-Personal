@@ -1,0 +1,15 @@
+name: 'Trend Personal — Recipe (cooking)'
+description: 'Adds the cooking-recipe content type: ingredients (with fraction display), directions, prep/cook time, servings, and food tags. Requires the trend_personal base.'
+type: 'Content type'
+
+# Apply the trend_personal base recipe first (it is the site install), then this.
+install:
+  - physical
+  - ut_recipe
+
+config:
+  strict: false
+  actions:
+    workflows.workflow.editorial:
+      addNodeTypes:
+        - recipe

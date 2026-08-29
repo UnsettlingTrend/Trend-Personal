@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:58692676-9f9f-4c73-9ec9-9a99bc80929b'
+id: ingredient
+label: Ingredient
+icon_uuid: 58692676-9f9f-4c73-9ec9-9a99bc80929b
+icon_default: 'data:image/svg+xml;base64,'
+description: 'A single <em>ingredient<em> in a recipe, with portions.'
+behavior_plugins: {  }

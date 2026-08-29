@@ -1,0 +1,9 @@
+name: 'Trend Personal — Quote'
+description: 'Adds the quote content type — an interesting quote with a source and tags — plus a front-page "quotes" block. Requires the trend_personal base.'
+type: 'Content type'
+
+# Apply the trend_personal base recipe first (it is the site install), then this.
+install: []
+
+config:
+  strict: false

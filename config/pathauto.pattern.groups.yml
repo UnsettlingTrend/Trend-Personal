@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+id: groups
+label: Groups
+type: 'canonical_entities:group'
+pattern: '/groups/[group:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -3
+relationships: {  }

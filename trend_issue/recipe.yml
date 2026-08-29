@@ -1,0 +1,13 @@
+name: 'Trend Personal — Issue'
+description: 'Adds the issue content type for tracking notable issues over time, with a Records paragraph and an issues taxonomy. Requires the trend_personal base.'
+type: 'Content type'
+
+# Apply the trend_personal base recipe first (it is the site install), then this.
+install: []
+
+config:
+  strict: false
+  actions:
+    workflows.workflow.editorial:
+      addNodeTypes:
+        - issue
