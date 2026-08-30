@@ -7,17 +7,32 @@ git repo, its own Platform.sh/Upsun project, and diverges freely after creation.
 
 ## Create a new site
 
+Once the packages are published (Packagist / private Satis):
+
 ```bash
 composer create-project unsettlingtrend/trend_project my-site
+```
+
+Before then, clone this template repo (it carries the four `unsettlingtrend/*`
+packages under `_local_packages/` and resolves them via path repos):
+
+```bash
+git clone <this-repo> my-site && rm -rf my-site/.git
+```
+
+Then, either way:
+
+```bash
 cd my-site
-lando start
+lando start            # creates web/sites/default/settings.local.php on first run
 lando composer install
 lando build            # compiles material_base + ut_base theme assets
 
-lando drush site:install recipes/trend_personal -y \
-  --account-name=admin --account-pass=admin \
-  trend_personal.site_name="My Site" \
-  trend_personal.site_mail="me@example.com"
+lando si               # = drush site:install recipes/trend_personal -y --account-name=admin --account-pass=admin
+#   (or the full form to pass site_name / site_mail:)
+# lando drush site:install recipes/trend_personal -y \
+#   --account-name=admin --account-pass=admin \
+#   trend_personal.site_name="My Site" trend_personal.site_mail="me@example.com"
 
 lando drush cex -y     # seed config/sync/default from the installed site
 git init && git add -A && git commit -m "Initial install from trend_project"
