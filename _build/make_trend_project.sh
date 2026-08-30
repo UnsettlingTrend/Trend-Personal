@@ -110,6 +110,10 @@ s = s.replace('name: cf', 'name: trend')
 s = re.sub(r'\n *build_as_root:\n(?: {6}.*\n)+', '\n', s)   # python / pip / platform CLI
 s = re.sub(r'\n *gulp-cli: latest\n', '\n', s)
 s = s.replace('cf.lndo.site', 'trend.lndo.site').replace('serverName=cf', 'serverName=trend')
+# register an explicit appserver proxy route (some Lando/Traefik states miss the
+# implicit <appname>.lndo.site route and 404)
+if re.search(r'^proxy:\s*$', s, re.M) and 'appserver:\n    - trend.lndo.site' not in s:
+    s = re.sub(r'^proxy:\s*\n', 'proxy:\n  appserver:\n    - trend.lndo.site\n', s, count=1, flags=re.M)
 # auto-create settings.local.php on first start; add a `lando si` shortcut
 if 'settings.local.php' not in s:
     s = s.replace(
