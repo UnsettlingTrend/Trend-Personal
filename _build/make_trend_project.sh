@@ -44,9 +44,48 @@ cp "$BUILD/trend_project.composer.json" "$DEST/composer.json"
 cp "$BUILD/trend_project.README.md"     "$DEST/README.md"
 rm -f "$DEST/composer.lock"
 
+# LOCAL_PATHS=1 : vendor the four unsettlingtrend packages into ./_local_packages/
+# and point path repos there, so `composer install` works before anything is
+# published. Self-contained: survives a git clone of the template.
+if [ "${LOCAL_PATHS:-0}" = "1" ]; then
+  mkdir -p "$DEST/_local_packages"
+  rsync -a --exclude='_build/' "$SRC/recipes/trend_personal/"      "$DEST/_local_packages/trend_personal/"
+  rsync -a "$SRC/web/themes/custom/ut_base/"                       "$DEST/_local_packages/ut_base/"
+  rsync -a "$SRC/web/modules/custom/ut_utilities/"                 "$DEST/_local_packages/ut_utilities/"
+  rsync -a "$SRC/web/modules/custom/ut_recipe/"                    "$DEST/_local_packages/ut_recipe/"
+  python3 - "$DEST/composer.json" <<'PY'
+import sys, json
+p = sys.argv[1]
+d = json.load(open(p))
+d['repositories'] = [r for r in d['repositories']
+                     if not (r.get('type') == 'vcs' and 'unsettlingtrend' in r.get('url', ''))]
+for name in ('trend_personal', 'ut_base', 'ut_utilities', 'ut_recipe'):
+    d['repositories'].append({'type': 'path', 'url': f'_local_packages/{name}',
+                              'options': {'symlink': False}})
+for pkg in ('unsettlingtrend/trend_personal', 'unsettlingtrend/ut_base',
+            'unsettlingtrend/ut_utilities', 'unsettlingtrend/ut_recipe'):
+    d['require'][pkg] = '@dev'
+json.dump(d, open(p, 'w'), indent=4)
+PY
+  echo "composer.json patched for LOCAL_PATHS; packages vendored to _local_packages/"
+fi
+
 # --- empty config sync tree -------------------------------------------
 mkdir -p "$DEST"/config/sync/{default,dev,local,non_production,prod}
 touch "$DEST"/config/sync/default/.gitkeep
+
+# --- lando/settings.lando.php : correct DB creds + MySQL-8 TLS workaround
+python3 - "$DEST/lando/settings.lando.php" <<'PY'
+import sys, re
+p = sys.argv[1]
+s = open(p).read()
+s = re.sub(r"'(database|username|password)' => 'drupal10',", r"'\1' => 'drupal11',", s)
+if "MYSQL_ATTR_SSL_VERIFY_SERVER_CERT" not in s:
+    s = s.replace(
+        "'driver' => 'mysql',",
+        "'driver' => 'mysql',\n  // Lando's MySQL 8 regenerates self-signed certs on rebuild; don't verify.\n  'pdo' => [PDO::MYSQL_ATTR_SSL_CA => NULL, PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => FALSE],", 1)
+open(p, 'w').write(s)
+PY
 
 # --- .lando.yml : de-personalise ------------------------------------
 python3 - "$DEST/.lando.yml" <<'PY'
@@ -71,6 +110,20 @@ s = s.replace('name: cf', 'name: trend')
 s = re.sub(r'\n *build_as_root:\n(?: {6}.*\n)+', '\n', s)   # python / pip / platform CLI
 s = re.sub(r'\n *gulp-cli: latest\n', '\n', s)
 s = s.replace('cf.lndo.site', 'trend.lndo.site').replace('serverName=cf', 'serverName=trend')
+# auto-create settings.local.php on first start; add a `lando si` shortcut
+if 'settings.local.php' not in s:
+    s = s.replace(
+        'events:\n',
+        "events:\n"
+        "  pre-start:\n"
+        "    - appserver: test -f web/sites/default/settings.local.php || cp lando/settings.lando.php web/sites/default/settings.local.php\n",
+        1)
+if '\n  si:\n' not in s:
+    s = s.rstrip() + (
+        "\n  si:\n"
+        "    service: appserver\n"
+        "    description: Install the site from the trend_personal recipe.\n"
+        "    cmd: drush site:install /app/recipes/trend_personal -y --account-name=admin --account-pass=admin\n")
 s = re.sub(r'\n{3,}', '\n\n', s).rstrip() + '\n'
 open(p, 'w').write(s)
 PY

@@ -1,0 +1,7 @@
+{
+    "name": "unsettlingtrend/trend_personal",
+    "description": "Recipe set for a Trend personal site: a lean base plus opt-in content-type add-ons.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://unsettlingtrend.com/"
+}
