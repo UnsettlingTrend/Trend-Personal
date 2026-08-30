@@ -27,17 +27,13 @@ rsync -a \
   --exclude='misc/' --exclude='.gitlab-ci.yml' \
   "$SRC/" "$DEST/"
 
-# --- the custom code the recipes need travels with the template ----------
-mkdir -p "$DEST/web/modules/custom" "$DEST/web/themes/custom"
-# (During Phase F these become Composer deps and these copies are removed.)
-rsync -a "$SRC/web/modules/custom/ut_utilities/" "$DEST/web/modules/custom/ut_utilities/"
-rsync -a "$SRC/web/modules/custom/ut_recipe/"    "$DEST/web/modules/custom/ut_recipe/"
-rsync -a "$SRC/web/themes/custom/ut_base/"       "$DEST/web/themes/custom/ut_base/"
-
-# --- the recipe package --------------------------------------------------
-mkdir -p "$DEST/recipes/trend_personal"
-rsync -a --exclude='_build/' "$SRC/recipes/trend_personal/" "$DEST/recipes/trend_personal/"
-printf '/contrib\n' > "$DEST/recipes/.gitignore"
+# The template ships NO custom code — ut_base / ut_utilities / ut_recipe /
+# trend_personal all come from Composer (vcs repos, or _local_packages/ path
+# repos in LOCAL_PATHS mode), installed into web/{modules,themes}/contrib and
+# recipes/ where they are git-ignored like any other Composer-managed code.
+rm -rf "$DEST/web/modules/custom" "$DEST/web/themes/custom" "$DEST/recipes/trend_personal"
+mkdir -p "$DEST/recipes"
+printf '/contrib\n/trend_personal\n' > "$DEST/recipes/.gitignore"
 
 # --- composer.json + README --------------------------------------------
 cp "$BUILD/trend_project.composer.json" "$DEST/composer.json"
@@ -170,8 +166,19 @@ innodb_buffer_pool_size = 512M
 max_allowed_packet = 64M
 CNF
 
-# --- build_theme.sh : retarget ut_material -> ut_base ------------------
-sed -i 's#web/themes/custom/ut_material#web/themes/custom/ut_base#g; s#themes/custom/ut_material#themes/custom/ut_base#g' "$DEST/lando/build_theme.sh" || true
+# --- build_theme.sh : build the Composer-installed themes ------------
+cat > "$DEST/lando/build_theme.sh" <<'SH'
+#!/usr/bin/env bash
+set -e
+# Base theme first, then the ut_base subtheme (both Composer-installed).
+for dir in web/themes/contrib/material_base web/themes/contrib/ut_base; do
+  echo "== building $dir =="
+  ( cd "/app/$dir"
+    if [ -f package-lock.json ]; then npm ci --no-audit --no-fund; else npm install --no-audit --no-fund; fi
+    npm run build --if-present
+  )
+done
+SH
 
 # --- drop prod-sync scripts -------------------------------------------
 rm -f "$DEST"/lando/pull_prod.sh "$DEST"/lando/sync_with_prod*.sh "$DEST"/lando/sync_media.sh
