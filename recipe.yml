@@ -211,6 +211,19 @@ config:
     node.settings:
       simpleConfigUpdate:
         use_admin_theme: true
+    # Gin ships classic_toolbar: new (the experimental toolbar, which needs the
+    # core Navigation module). This base doesn't install Navigation, so use the
+    # classic vertical Gin toolbar, which works with admin_toolbar + core
+    # toolbar and renders on ut_base front-end pages.
+    gin.settings:
+      simpleConfigUpdate:
+        classic_toolbar: vertical
+        secondary_toolbar_frontend: true
+        preset_accent_color: light_blue
+        preset_focus_color: accent
+        enable_darkmode: auto
+        layout_density: medium
+        sticky_action_buttons: true
     user.settings:
       simpleConfigUpdate:
         register: visitors_admin_approval
