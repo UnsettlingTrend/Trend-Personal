@@ -50,7 +50,7 @@ lando drush php:script /app/recipes/trend_personal/_build/strip_bucket.php
 
 ## Remaining phases
 
-- **F** — **local subtree splits done** (`_build/phase_f_split.sh`): branches `split/{trend_personal,ut_base,ut_utilities,ut_recipe}` in this repo. Still needs your gitlab account: create the four `gitlab.com/unsettlingtrend/*` repos, push each `split/*` branch as `main`, tag (`trend_personal` → `2.0.0`, others → `1.0.0`). Then rebuild `trend_project` **without** `LOCAL_PATHS` (its four `vcs` repos are already in composer.json), set the `unsettlingtrend/*` constraints to `^2.0`/`^1.0`, push it, and `composer create-project` end-to-end.
+- **F** — `_build/phase_f_split.sh` splits **9** packages: 4 base (`trend_personal`, `ut_base`, `ut_utilities`, `ut_recipe`) + 5 optional add-on modules (`cove`, `strava_api`, `ut_tracking`, `race_day`, `ut_robinhood`). Needs your **GitHub** account (org `UnsettlingTrend`): create the repos (`gh repo create UnsettlingTrend/<name> --private`), push each `split/*` branch as `main`, tag (`trend_personal` → `2.0.0`, all others → `1.0.0`). Then rebuild `trend_project` **without** `LOCAL_PATHS` (its 9 `github.com/UnsettlingTrend/*` `vcs` repos are already in composer.json), set the base `unsettlingtrend/*` constraints to `^2.0`/`^1.0`, push it, and `composer create-project` end-to-end. Playbook: `_build/phase_f_extract.md`.
 - **G** — migrate live chrisferagotti.com (stays on `standard` for now). Separate effort.
 
 ## Local env note

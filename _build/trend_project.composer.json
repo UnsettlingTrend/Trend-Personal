@@ -10,10 +10,15 @@
     "repositories": [
         { "type": "composer", "url": "https://packages.drupal.org/8" },
         { "type": "composer", "url": "https://asset-packagist.org" },
-        { "type": "vcs", "url": "https://gitlab.com/unsettlingtrend/trend_personal.git" },
-        { "type": "vcs", "url": "https://gitlab.com/unsettlingtrend/ut_base.git" },
-        { "type": "vcs", "url": "https://gitlab.com/unsettlingtrend/ut_utilities.git" },
-        { "type": "vcs", "url": "https://gitlab.com/unsettlingtrend/ut_recipe.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/trend_personal.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/ut_base.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/ut_utilities.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/ut_recipe.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/cove.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/strava_api.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/ut_tracking.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/race_day.git" },
+        { "type": "vcs", "url": "https://github.com/UnsettlingTrend/ut_robinhood.git" },
         {
             "type": "package",
             "package": {
