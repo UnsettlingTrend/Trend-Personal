@@ -70,18 +70,8 @@ fi
 mkdir -p "$DEST"/config/sync/{default,dev,local,non_production,prod}
 touch "$DEST"/config/sync/default/.gitkeep
 
-# --- lando/settings.lando.php : correct DB creds + MySQL-8 TLS workaround
-python3 - "$DEST/lando/settings.lando.php" <<'PY'
-import sys, re
-p = sys.argv[1]
-s = open(p).read()
-s = re.sub(r"'(database|username|password)' => 'drupal10',", r"'\1' => 'drupal11',", s)
-if "MYSQL_ATTR_SSL_VERIFY_SERVER_CERT" not in s:
-    s = s.replace(
-        "'driver' => 'mysql',",
-        "'driver' => 'mysql',\n  // Lando's MySQL 8 regenerates self-signed certs on rebuild; don't verify.\n  'pdo' => [PDO::MYSQL_ATTR_SSL_CA => NULL, PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => FALSE],", 1)
-open(p, 'w').write(s)
-PY
+# --- lando/settings.lando.php : correct DB creds for the drupal11 Lando recipe
+sed -i "s/'\(database\|username\|password\)' => 'drupal10',/'\1' => 'drupal11',/" "$DEST/lando/settings.lando.php"
 
 # --- .lando.yml : de-personalise ------------------------------------
 python3 - "$DEST/.lando.yml" <<'PY'
