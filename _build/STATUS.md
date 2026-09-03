@@ -41,10 +41,17 @@ lando drush php:script /app/recipes/trend_personal/_build/strip_bucket.php
 4. **`_build/` in the package**: add `/_build export-ignore` to `.gitattributes` before publishing so it doesn't ship to sites.
 5. A handful of non-fatal schema warnings from stale keys in chris's exported views (`workbench_*`, `events_calendar` `color_bundle`) — mostly cleaned in `strip_bucket.php`'s deep-clean; residual ones are cosmetic.
 
+## Demo-site fixes (from testing the throwaway create-project tree)
+
+- **theme build**: `ut_base` is a webpack theme; `dist/` is git-ignored → run `lando build` after create-project. The builder's `build_theme.sh` was fixed (it pointed at the stale `web/themes/custom/ut_material` path) → now builds `web/themes/contrib/{material_base,ut_base}`.
+- **admin toolbar missing on ut_base pages**: Gin 5.x ships `gin.settings` with `classic_toolbar: new` (the experimental Navigation-module toolbar); the base doesn't install `navigation`. Fixed — base recipe now has a `gin.settings` config action pinning `classic_toolbar: vertical` (commit `18f4636`).
+- **Lando proxy 404** on `<app>.lndo.site`: added an explicit `proxy: appserver:` route to the template `.lando.yml`; fix an existing app with `lando rebuild -y`.
+- **MySQL 8 cert drift** (`ERROR 2026 TLS/SSL`) after repeated `lando restart`: `lando rebuild -s database -y`. Do not add SSL `pdo` options — they break the `mysql` CLI.
+
 ## Remaining phases
 
-- **F** — split `trend_personal`, `ut_base`, `ut_utilities`, `ut_recipe` into their own `gitlab.com/unsettlingtrend/` repos (`git subtree split`), tag (`2.0.0` / `1.0.0`), publish; swap the template's path repos → vcs; run `composer create-project` end-to-end.
-- **G** — migrate live chrisferagotti.com (stays on `standard` for now; recipes are additive so it can converge, or be rebuilt from the template + content migration). Separate effort.
+- **F** — **local subtree splits done** (`_build/phase_f_split.sh`): branches `split/{trend_personal,ut_base,ut_utilities,ut_recipe}` in this repo. Still needs your gitlab account: create the four `gitlab.com/unsettlingtrend/*` repos, push each `split/*` branch as `main`, tag (`trend_personal` → `2.0.0`, others → `1.0.0`). Then rebuild `trend_project` **without** `LOCAL_PATHS` (its four `vcs` repos are already in composer.json), set the `unsettlingtrend/*` constraints to `^2.0`/`^1.0`, push it, and `composer create-project` end-to-end.
+- **G** — migrate live chrisferagotti.com (stays on `standard` for now). Separate effort.
 
 ## Local env note
 
