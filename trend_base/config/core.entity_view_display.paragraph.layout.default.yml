@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.layout
+id: paragraph.layout.default
+targetEntityType: paragraph
+bundle: layout
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

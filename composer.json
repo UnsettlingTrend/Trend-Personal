@@ -1,18 +1,12 @@
 {
     "name": "unsettlingtrend/trend_personal",
-    "description": "The installation profile for UnsettlingTrend Personal sites.",
-    "homepage": "https://unsettlingtrend.com/",
-    "type": "drupal-profile",
+    "description": "The recipe set behind a Trend personal site: the Trend Base foundation plus the trend_default and trend_personal site compositions.",
+    "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Chris Feragotti (chrisferagotti)",
-            "homepage": "https://chrisferagotti.com",
-            "role": "Maintainer"
-        }
-    ],
+    "homepage": "https://unsettlingtrend.com/",
     "require": {
-        "php": ">=8.2",
-        "drupal/core": "11.*"
+        "unsettlingtrend/ut_default_content": "^1.0",
+        "unsettlingtrend/ut_journal": "^1.0",
+        "unsettlingtrend/ut_recipes": "^1.1"
     }
 }

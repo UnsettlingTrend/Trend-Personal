@@ -1,0 +1,353 @@
+name: 'Trend Base'
+description: 'The Trend foundation: core content model (article, page, landing page, webform), editorial workflow, paragraphs, media, search, restricted-content groups, the UT Base theme and site glue, plus the default content types (place, event, quote, issue) from the ut_default_content module. Compositions (trend_default, trend_personal) build on this; it is not installed directly.'
+type: 'Site'
+
+install:
+  # --- Core ---
+  - automated_cron
+  - basic_auth
+  - big_pipe
+  - block
+  - block_content
+  - breakpoint
+  - ckeditor5
+  - comment
+  - config
+  - contextual
+  - datetime
+  - datetime_range
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - history
+  - image
+  - inline_form_errors
+  - layout_builder
+  - layout_discovery
+  - link
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - responsive_image
+  - serialization
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - update
+  - views
+  - views_ui
+  - workflows
+  - content_moderation
+  # --- Contrib: admin / editorial ---
+  - admin_toolbar
+  - admin_toolbar_tools
+  - gin_toolbar
+  - module_filter
+  - masquerade
+  - workbench
+  - environment_indicator
+  - environment_indicator_ui
+  - config_split
+  - diff
+  # --- Contrib: content model / paragraphs ---
+  - paragraphs
+  - paragraphs_library
+  - paragraphs_type_permissions
+  - layout_paragraphs
+  - layout_paragraphs_library
+  - layout_paragraphs_permissions
+  - entity_reference_revisions
+  - dynamic_entity_reference
+  - field_group
+  - add_content_by_bundle
+  - publication_date
+  - smart_trim
+  - time_formatter
+  - twig_field_value
+  - twig_tweak
+  - token
+  - pathauto
+  - redirect
+  - redirect_404
+  - metatag
+  - easy_breadcrumb
+  - node_view_permissions
+  - entity
+  - entity_usage
+  - ctools
+  - ctools_block
+  - ctools_views
+  - components
+  # --- Contrib: media / images ---
+  - crop
+  - focal_point
+  - image_widget_crop
+  - svg_image
+  - svg_image_responsive
+  - photoswipe
+  - photoswipe_dynamic_caption
+  - entity_browser
+  - entity_browser_entity_form
+  # --- Contrib: forms / UI widgets ---
+  - webform
+  - webform_ui
+  - webform_node
+  - webform_templates
+  - webform_attachment
+  - webform_views
+  - webform_access
+  - webform_image_select
+  - webform_options_custom
+  - webform_options_limit
+  - better_exposed_filters
+  - selective_better_exposed_filters
+  - views_dependent_filters
+  - views_bulk_operations
+  - viewsreference
+  - block_field
+  - block_content_template
+  - chosen
+  - chosen_lib
+  - chosen_field
+  - select2
+  - select2_facets
+  - inline_entity_form
+  - disable_html5_validation
+  - jquery_ui
+  - jquery_ui_autocomplete
+  - jquery_ui_datepicker
+  - jquery_ui_menu
+  - jquery_ui_slider
+  - jquery_ui_touch_punch
+  - key
+  - json_field
+  # --- Contrib: search ---
+  - search_api
+  - search_api_db
+  - search_api_autocomplete
+  - search_api_block
+  - search_api_sorts
+  - facets
+  - facets_exposed_filters
+  - facets_searchbox_widget
+  - facets_summary
+  # --- Contrib: spam / security ---
+  - honeypot
+  - captcha
+  - image_captcha
+  - recaptcha
+  - cookies
+  # --- Contrib: groups / access ---
+  - group
+  - gnode
+  - flexible_permissions
+  # --- Contrib: auth / social ---
+  - social_api
+  - social_auth
+  - social_auth_google
+  - login_emailusername
+  # --- Contrib: mail ---
+  - symfony_mailer
+  - symfony_mailer_log
+  - mailer_transport
+  - mailer_policy
+  - message
+  - message_notify
+  # --- Contrib: misc ---
+  - name
+  # --- UnsettlingTrend ---
+  - ut_utilities
+  - ut_default_content
+  # --- Themes ---
+  - claro
+  - gin
+  - ut_base
+
+input:
+  site_name:
+    description: 'Human-readable site name.'
+    data_type: string
+    default:
+      source: value
+      value: 'My Trend Site'
+    prompt:
+      method: ask
+      arguments:
+        question: 'Site name'
+  site_mail:
+    description: 'From-address for automated site email.'
+    data_type: email
+    default:
+      source: value
+      value: 'admin@example.com'
+    prompt:
+      method: ask
+      arguments:
+        question: 'Site email address'
+  google_maps_api_key:
+    description: 'Google Maps Platform API key used to geocode place addresses.'
+    data_type: string
+    default:
+      source: env
+      env: GOOGLE_MAPS_API_KEY
+      fallback: ''
+
+config:
+  strict: false
+  import:
+    ut_default_content: '*'
+  actions:
+    system.site:
+      simpleConfigUpdate:
+        name: ${site_name}
+        mail: ${site_mail}
+        page.front: /node
+    system.theme:
+      simpleConfigUpdate:
+        default: ut_base
+        admin: gin
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
+    # Gin ships classic_toolbar: new (the experimental toolbar, which needs the
+    # core Navigation module). This base doesn't install Navigation, so use the
+    # classic vertical Gin toolbar, which works with admin_toolbar + core
+    # toolbar and renders on ut_base front-end pages.
+    gin.settings:
+      simpleConfigUpdate:
+        classic_toolbar: vertical
+        secondary_toolbar_frontend: true
+        preset_accent_color: light_blue
+        preset_focus_color: accent
+        enable_darkmode: auto
+        layout_density: medium
+        sticky_action_buttons: true
+    user.settings:
+      simpleConfigUpdate:
+        register: visitors_admin_approval
+        verify_mail: true
+    pathauto.settings:
+      simpleConfigUpdate:
+        enabled_entity_types:
+          - user
+    # These modules ship their settings without a langcode; add it so config
+    # validation is clean.
+    chosen.settings:
+      simpleConfigUpdate:
+        langcode: en
+    image_captcha.settings:
+      simpleConfigUpdate:
+        langcode: en
+    photoswipe.settings:
+      simpleConfigUpdate:
+        langcode: en
+    workbench.settings:
+      simpleConfigUpdate:
+        langcode: en
+    ut_utilities.settings:
+      simpleConfigUpdate:
+        default_areas_of_interest: {  }
+        allow_social_api_registration: true
+    # The real geocoding key is supplied per-site via the google_maps_api_key
+    # input (default from the GOOGLE_MAPS_API_KEY environment variable). The
+    # provider config itself ships in ut_default_content/config/optional.
+    geocoder.geocoder_provider.googlemaps:
+      simpleConfigUpdate:
+        configuration.apiKey: ${google_maps_api_key}
+    # Editorial-workflow membership for the default content types. place and
+    # quote are intentionally not moderated.
+    workflows.workflow.editorial:
+      addNodeTypes:
+        - event
+        - issue
+    user.role.anonymous:
+      grantPermissions:
+        - 'access comments'
+        - 'access content'
+        - 'use text format limited_html'
+        - 'use text format restricted_html'
+        - 'view any article content'
+        - 'view any landing_page content'
+        - 'view any page content'
+        - 'view any webform content'
+        - 'view media'
+        - 'view paragraph content block'
+        - 'view paragraph content from_library'
+        - 'view paragraph content layout'
+        - 'view paragraph content media'
+        - 'view paragraph content section'
+        - 'view paragraph content text_area'
+        - 'view paragraph content text_list'
+        - 'view paragraph content view'
+    user.role.authenticated:
+      grantPermissions:
+        - 'access administration pages'
+        - 'access comments'
+        - 'access content'
+        - 'access contextual links'
+        - 'access toolbar'
+        - 'access user profiles'
+        - 'change own username'
+        - 'create audio media'
+        - 'create document media'
+        - 'create image media'
+        - 'create media'
+        - 'create remote_video media'
+        - 'create terms in tags'
+        - 'create url aliases'
+        - 'create video media'
+        - 'create paragraph content media'
+        - 'create paragraph content section'
+        - 'create paragraph content text_area'
+        - 'delete media'
+        - 'delete own files'
+        - 'edit terms in tags'
+        - 'post comments'
+        - 'skip CAPTCHA'
+        - 'skip comment approval'
+        - 'update media'
+        - 'use editorial transition create_new_draft'
+        - 'use editorial transition publish'
+        - 'use editorial transition archived_draft'
+        - 'use editorial transition archived_published'
+        - 'use text format basic_html'
+        - 'use text format limited_html'
+        - 'use text format webform_default'
+        - 'view any article content'
+        - 'view any landing_page content'
+        - 'view any page content'
+        - 'view any webform content'
+        - 'view latest version'
+        - 'view media'
+        - 'view own unpublished content'
+        - 'view the administration theme'
+    user.role.content_creator:
+      grantPermissions:
+        - 'create article content'
+        - 'create landing_page content'
+        - 'create page content'
+        - 'create webform content'
+        - 'delete any article content'
+        - 'delete any landing_page content'
+        - 'delete any page content'
+        - 'delete any webform content'
+        - 'edit any article content'
+        - 'edit any landing_page content'
+        - 'edit any page content'
+        - 'edit any webform content'
+        - 'revert article revisions'
+        - 'revert landing_page revisions'
+        - 'revert page revisions'
+        - 'view all revisions'

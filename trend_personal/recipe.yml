@@ -1,0 +1,21 @@
+name: 'Trend Personal'
+description: 'The full Trend personal site: the Trend Base foundation and the default content types, plus journal entries (ut_journal) and cooking recipes (ut_recipes). Install the site from this recipe for a ChrisFeragotti.com-style build.'
+type: 'Site'
+
+recipes:
+  - trend_base
+
+install:
+  - ut_journal
+  - ut_recipes
+
+config:
+  strict: false
+  import:
+    ut_journal: '*'
+    ut_recipes: '*'
+  actions:
+    # journal_entry is intentionally not moderated; recipe is.
+    workflows.workflow.editorial:
+      addNodeTypes:
+        - recipe

@@ -1,0 +1,6 @@
+name: 'Trend Default'
+description: 'A standard Trend personal site: the Trend Base foundation and the default content types (place, event, quote, issue). This is the create-project default — install the site from this recipe.'
+type: 'Site'
+
+recipes:
+  - trend_base
