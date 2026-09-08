@@ -167,6 +167,32 @@ install:
   - message_notify
   # --- Contrib: misc ---
   - name
+  # --- Contrib: geo / dates (support the ut_default_content place + event types;
+  #     listed explicitly so recipe validation can resolve the geocoder config
+  #     action and so install ordering is deterministic) ---
+  - address
+  - geofield
+  - geocoder
+  - geocoder_field
+  - geocoder_address
+  - geocoder_geofield
+  - geolocation
+  - geolocation_geofield
+  - geolocation_address
+  - geolocation_google_maps
+  - geolocation_google_static_maps
+  - geolocation_leaflet
+  - geolocation_geometry
+  - geolocation_geometry_data
+  - leaflet
+  - leaflet_more_maps
+  - leaflet_more_markers
+  - search_api_location
+  - search_api_location_geocoder
+  - search_api_location_views
+  - smart_date
+  - smart_date_starter_kit
+  - fullcalendar_view
   # --- UnsettlingTrend ---
   - ut_utilities
   - ut_default_content
