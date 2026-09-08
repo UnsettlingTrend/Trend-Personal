@@ -222,13 +222,6 @@ input:
       method: ask
       arguments:
         question: 'Site email address'
-  google_maps_api_key:
-    description: 'Google Maps Platform API key used to geocode place addresses.'
-    data_type: string
-    default:
-      source: env
-      env: GOOGLE_MAPS_API_KEY
-      fallback: ''
 
 config:
   strict: false
@@ -286,12 +279,13 @@ config:
       simpleConfigUpdate:
         default_areas_of_interest: {  }
         allow_social_api_registration: true
-    # The real geocoding key is supplied per-site via the google_maps_api_key
-    # input (default from the GOOGLE_MAPS_API_KEY environment variable). The
-    # provider config itself ships in ut_default_content/config/optional.
-    geocoder.geocoder_provider.googlemaps:
-      simpleConfigUpdate:
-        configuration.apiKey: ${google_maps_api_key}
+    # The geocoder.geocoder_provider.googlemaps provider ships (with an empty
+    # apiKey) in ut_default_content/config/optional. The key is a per-site
+    # secret — set it after install, e.g.
+    #   drush config:set geocoder.geocoder_provider.googlemaps configuration.apiKey <KEY>
+    # or, on Platform.sh, via the CREDS_GOOGLE_MAPS_PLATFORM_API_KEY settings
+    # override. Recipe inputs are not collected by `drush site:install`, so a
+    # ${...} placeholder here would be written literally.
     # Editorial-workflow membership for the default content types. place and
     # quote are intentionally not moderated.
     workflows.workflow.editorial:

@@ -44,8 +44,16 @@ drush site:install recipes/trend_personal/trend_personal -y \
   trend_base.site_name="My Site" trend_base.site_mail="me@example.com"
 ```
 
-`trend_base.google_maps_api_key=…` is optional; it defaults to the
-`GOOGLE_MAPS_API_KEY` environment variable.
+The Google Maps geocoding key is a per-site secret and is **not** set by the
+recipe (`drush site:install` does not collect recipe inputs). Set it after
+install:
+
+```bash
+drush config:set geocoder.geocoder_provider.googlemaps configuration.apiKey <KEY>
+```
+
+On Platform.sh, the `trend_project` template wires
+`CREDS_GOOGLE_MAPS_PLATFORM_API_KEY` through a settings override instead.
 
 ## Editorial workflow
 
