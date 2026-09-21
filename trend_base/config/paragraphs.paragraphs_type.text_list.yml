@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: text_list
-label: 'Text List'
-icon_uuid: null
-icon_default: null
-description: 'A <em>list</em> of <em>text</em> entries.'
-behavior_plugins: {  }

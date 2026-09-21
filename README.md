@@ -1,67 +1,32 @@
-# Trend Personal recipes
+# Trend Personal
 
-`unsettlingtrend/trend_personal` — the recipe set behind a Trend personal site.
+`unsettlingtrend/trend_personal` — the Trend personal-site recipe: the
+[`trend_base`](https://github.com/UnsettlingTrend/Trend-Base) foundation plus
 
-## Structure
-
-```
-composer.json         requires the three content modules
-trend_base/
-  recipe.yml          the foundation (content model, theme, glue) + installs
-                      ut_default_content and imports its config
-  config/             ~446 base config objects
-trend_default/
-  recipe.yml          recipes: [trend_base] — the create-project default
-trend_personal/
-  recipe.yml          recipes: [trend_base] + ut_journal + ut_recipes
-_build/               extraction toolchain (reference only, not shipped)
-```
-
-The content types themselves live in modules, not in these recipes:
-
-| module | content types |
+| module | adds |
 |---|---|
-| `unsettlingtrend/ut_default_content` | place, event, quote, issue |
-| `unsettlingtrend/ut_journal` | journal_entry |
-| `unsettlingtrend/ut_recipes` | recipe (+ fraction filter, SDC components) |
+| `unsettlingtrend/ut_journal` | `journal_entry` content type |
+| `unsettlingtrend/ut_recipes` | `recipe` content type, fraction filter, ingredient/directions components |
 
-Each module ships its config in `config/optional`, so enabling it on a site that
-already has the config is a no-op. A recipe's `config.import` creates the config
-on a fresh install (recipes install modules with config-entity installation
-disabled).
+It also puts `recipe` under the editorial workflow (`journal_entry` is not
+moderated).
 
 ## Install
 
-```bash
-# Standard site
-drush site:install recipes/trend_personal/trend_default -y \
-  --account-name=admin --account-pass=admin \
-  trend_base.site_name="My Site" trend_base.site_mail="me@example.com"
-
-# Full site (adds journal + recipes)
-drush site:install recipes/trend_personal/trend_personal -y \
-  --account-name=admin --account-pass=admin \
-  trend_base.site_name="My Site" trend_base.site_mail="me@example.com"
-```
-
-The Google Maps geocoding key is a per-site secret and is **not** set by the
-recipe (`drush site:install` does not collect recipe inputs). Set it after
-install:
+`trend_base` must sit next to this recipe (`recipes/trend_base`) — Composer does
+that when it installs `drupal-recipe` packages.
 
 ```bash
-drush config:set geocoder.geocoder_provider.googlemaps configuration.apiKey <KEY>
+drush site:install recipes/trend_personal -y \
+  --account-name=admin --account-pass=admin \
+  --site-name="My Site" --site-mail="me@example.com"
 ```
 
-On Platform.sh, the `trend_project` template wires
-`CREDS_GOOGLE_MAPS_PLATFORM_API_KEY` through a settings override instead.
+Set the per-site Google Maps geocoding key afterwards; see the `trend_base`
+README.
 
-## Editorial workflow
+## History
 
-`trend_base` moderates `event` and `issue`; `trend_personal` adds `recipe`.
-`place`, `quote` and `journal_entry` are not moderated.
-
-## Regenerating `trend_base/config/`
-
-Generated from a reference-site export by `_build/strip_bucket.php` (not run at
-install time). The module `config/optional` directories are generated the same
-way, in their own repos.
+Until 4.0.0 this package also carried `trend_base` and a `trend_default`
+composition. `trend_base` is now its own package and installs directly as the
+standard site, so `trend_default` is gone: use `recipes/trend_base`.

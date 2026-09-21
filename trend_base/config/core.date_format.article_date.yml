@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: article_date
-label: 'Article Date'
-locked: false
-pattern: 'M d, Y'

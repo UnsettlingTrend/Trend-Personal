@@ -1,11 +1,11 @@
 {
     "name": "unsettlingtrend/trend_personal",
-    "description": "The recipe set behind a Trend personal site: the Trend Base foundation plus the trend_default and trend_personal site compositions.",
+    "description": "A Trend personal site: the trend_base foundation plus journal entries (ut_journal) and cooking recipes (ut_recipes).",
     "type": "drupal-recipe",
     "license": "GPL-2.0-or-later",
     "homepage": "https://unsettlingtrend.com/",
     "require": {
-        "unsettlingtrend/ut_default_content": "^1.0",
+        "unsettlingtrend/trend_base": "^1.0",
         "unsettlingtrend/ut_journal": "^1.0",
         "unsettlingtrend/ut_recipes": "^1.1"
     }
